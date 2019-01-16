@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.main.disanxuelib.view.MyCheckBox xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rg_timeselect"
+    style="@style/radiobutton_style"
+    />

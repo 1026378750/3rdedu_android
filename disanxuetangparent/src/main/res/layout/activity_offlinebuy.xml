@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background="@color/color_ffffff"
+        app:isTopBar="true"
+        app:left_button_image="@mipmap/ic_black_left_arrow"
+        app:show_left_button="true"
+        app:title_text="购买课程"
+        app:title_textColor="@color/color_333333"
+        app:title_textSize="@dimen/size_18px" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_ffffff"
+            android:orientation="vertical">
+
+            <com.main.disanxuelib.view.CommonCrosswiseBar
+                android:id="@+id/ccb_offline_signaltime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="单次课时长"
+                app:left_button_textColor="@color/color_333333"
+                app:left_button_textSize="@dimen/size_14px"
+                app:right_button_text="小时"
+                app:right_button_textColor="@color/color_666666"
+                app:right_button_textSize="@dimen/size_14px" />
+
+            <TextView
+                android:id="@+id/tv_teachingmethod_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="6dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="6dp"
+                android:text="授课方式"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/size_14sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_pay_teachingmethod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_offline_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="授课地址"
+                android:textColor="@color/color_333333"
+                android:visibility="gone"
+                android:textSize="@dimen/size_14sp" />
+
+            <com.main.disanxuelib.view.CommonCrosswiseBar
+                android:id="@+id/ccb_offline_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="地址信息"
+                app:left_button_textColor="@color/color_333333"
+                app:left_button_textSize="@dimen/size_14px"
+                android:visibility="gone"
+                app:right_button_image="@mipmap/ic_black_right_arrow"
+                app:show_right_button="true"/>
+
+            <TextView
+                android:id="@+id/tv_discounts_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="6dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="6dp"
+                android:text="优惠折扣"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/size_14sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_pay_discounts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.main.disanxuelib.view.CommonCrosswiseBar
+                android:id="@+id/ccb_offline_buynum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_size="@dimen/size_16px"
+                app:left_button_text="购买数量"
+                app:left_button_textColor="@color/color_333333"
+                app:left_button_textSize="@dimen/size_14px"
+                app:right_button_image="@mipmap/ic_black_right_arrow"
+                app:right_button_text="请选择"
+                app:right_button_textColor="@color/color_666666"
+                app:right_button_textSize="@dimen/size_14px"
+                app:show_right_button="true" />
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_e59b10"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0.5dp"
+            android:layout_weight="2"
+            android:background="@color/color_ffffff"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="价格："
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/size_16sp" />
+            <TextView
+                android:id="@+id/rv_pay_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/color_ffae12"
+                android:textSize="@dimen/size_16sp"
+                tools:text="价格" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/iv_offline_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:background="@drawable/btn_common_button"
+            android:padding="15dp"
+            android:enabled="false"
+            android:clickable="false"
+            android:text="选择上课时间"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/size_16sp" />
+    </LinearLayout>
+</LinearLayout>

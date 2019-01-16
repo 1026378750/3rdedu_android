@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_ffffff">
+
+    <ImageView
+        android:id="@+id/iv_mine_message"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/mine_news" />
+
+    <TextView
+        android:id="@+id/tv_meesage_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/iv_mine_message"
+        android:lineSpacingExtra="2dp"
+        android:minLines="3"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/size_13sp"
+        tools:text="为了给您提供更好的服务，已为您绑定助教：李助教-13818885656，遇到任何问题可联系助教处理。" />
+
+    <TextView
+        android:id="@+id/tv_meesage_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_meesage_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="60dp"
+        android:paddingRight="10dp"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/size_12sp"
+        tools:text="日期(yyyy-MM-dd HH:mm)" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tv_meesage_time"
+        android:background="@color/line_color" />
+</RelativeLayout>

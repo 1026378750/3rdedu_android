@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>老师主页</title>
+    <link rel="icon" href="images/bitbug_favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="css/gobal.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+</head>
+<body>
+<div class="teacherDetailWrap">
+    <header class="teacherTopWrap">
+        <div class="teacherBgBlack"></div>
+        <div class="teacherBg"></div>
+        <div class="teacherImgWrap">
+            <div class="teacherImg"></div>
+        </div>
+        <div class="teacherNameWrap">
+            <span class="teacherName"></span>
+            <i class="teacherRdedu"></i>
+        </div>
+        <div class="teacherInformationWrap">
+            <i class="teacherSex"></i>
+            <span class="teacherSubject"></span>
+            <span class="teacherAge"></span>
+        </div>
+        <ul class="teacherBottomInformationWrap">
+            <li class="studentNumber">
+                <div class="teacherTitle"></div>
+                <div class="teacherInformationImg"></div>
+                <div>学生数量</div>
+            </li>
+            <li class="orderNumber">
+                <div class="teacherTitle"></div>
+                <div class="teacherInformationImg"></div>
+                <div>订单数量</div>
+            </li>
+            <li class="teachingTime">
+                <div class="teacherTitle"></div>
+                <div class="teacherInformationImg"></div>
+                <div>授课时长</div>
+            </li>
+        </ul>
+    </header>
+    <section>
+        <ul class="courseWrap">
+            <li class="active oneToOneHeader" data="1"><span class="courseName">线下1对1</span><span
+                    class="number">(0)</span>
+                <div></div>
+            </li>
+            <li class="lineClassHeader" data="2"><span class="courseName">线下班课</span><span
+                    class="number">(0)</span>
+                <div></div>
+            </li>
+            <li class="onLineClassHeader" data="3"><span class="courseName">在线课程</span><span
+                    class="number">(0)</span>
+                <div></div>
+            </li>
+        </ul>
+        <div class="allClassWrap">
+            <div class="transformWrap clearfix">
+                <div class="oneToOneClassWrap">
+                    <ul>
+                    </ul>
+                </div>
+                <div class="lineClassWrap">
+                    <ul>
+                    </ul>
+                </div>
+                <div class="onLineClassWrap">
+                    <ul>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="seeMore">查看全部课程 <span class="triangle"></span></div>
+    </section>
+    <div class="teacherBriefIntroduction teacherText">
+        <div class="teacherTextTitle">个人简介</div>
+        <p></p>
+    </div>
+    <div class="teachingSchool teacherText">
+        <div class="teacherTextTitle">毕业院校</div>
+        <p></p>
+    </div>
+    <div class="teachingExperience teacherText">
+        <div class="teacherTextTitle">教学经历</div>
+        <ul class="teachingExperienceWrap">
+        </ul>
+    </div>
+    <div class="teacherBottomAll"><span></span><span class="text">已展示全部</span><span></span></div>
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/aes.min.js"></script>
+<script type="text/javascript" src="js/global.js"></script>
+<script type="text/javascript" src="js/teacherDetail.js"></script>
+<script type="text/javascript">
+  $(function () {
+    teacherDetail()
+  })
+
+</script>
+</body>
+</html>

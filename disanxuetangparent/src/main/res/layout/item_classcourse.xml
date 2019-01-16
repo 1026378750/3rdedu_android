@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:visibility="gone"
+        />
+    <LinearLayout
+        android:id="@+id/ll_teacher_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_ffffff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/iv_teacher_header"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/ic_personal_avatar" />
+
+        <TextView
+            android:id="@+id/iv_teacher_mesg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:drawablePadding="2dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:drawableRight="@mipmap/ic_black_right_arrow"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/size_14sp"
+            tools:text="信息" />
+    </LinearLayout>
+
+    <View style="@style/line_style" />
+
+    <include layout="@layout/item_classcourse_child" />
+</LinearLayout>

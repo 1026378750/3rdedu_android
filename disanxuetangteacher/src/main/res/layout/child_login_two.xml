@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingBottom="@dimen/size_40dp"
+    android:paddingLeft="@dimen/size_16dp"
+    android:paddingRight="@dimen/size_16dp"
+    android:paddingTop="@dimen/size_40dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/btn_round_white"
+        android:paddingLeft="35dp"
+        android:paddingRight="35dp"
+        android:paddingBottom="10dp"
+        >
+
+        <EditText
+            android:id="@+id/et_login_nicname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:background="@null"
+            android:padding="16dp"
+            android:maxLines="1"
+            android:gravity="center"
+            android:ellipsize="end"
+            android:textSize="@dimen/size_14sp"
+            android:textColor="@color/color_333333"
+            android:textColorHint="@color/color_cccccc"
+            android:hint="昵称"
+            />
+
+        <View style="@style/line_style"/>
+
+        <RadioGroup
+            android:id="@+id/rg_login_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            >
+            <RadioButton
+                android:id="@+id/rb_login_man"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/size_14sp"
+                android:button="@drawable/btn_tick"
+                android:layout_marginRight="10dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:paddingRight="20dp"
+                android:paddingLeft="10dp"
+                android:text="男"
+                />
+            <RadioButton
+                android:id="@+id/rb_login_woman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/size_14sp"
+                android:button="@drawable/btn_tick"
+                android:layout_marginLeft="10dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:paddingRight="20dp"
+                android:paddingLeft="10dp"
+                android:text="女"
+                />
+
+        </RadioGroup>
+        <View style="@style/line_style"/>
+
+        <TextView
+            android:id="@+id/tv_logintwo_notify"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="12dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/color_d92b2b"
+            android:textSize="@dimen/size_10sp"
+            tools:text="提示信息"
+            />
+
+        <Button
+            android:id="@+id/btn_login_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/btn_login_status"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/size_15sp"
+            android:text="完 成"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/tv_login_jump"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#9b99a9"
+            android:textSize="@dimen/size_12sp"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="跳过此步骤"
+            />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_login_headimage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_head_3rd_normal"
+        android:layout_centerHorizontal="true"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_home_subject"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:id="@+id/rv_common_headview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background="@color/color_ffffff"
+        app:left_button_image="@mipmap/ic_black_left_arrow"
+        app:show_left_button="true"
+        app:title_text="线下1对1"
+        app:isTopBar="true"
+        app:show_line="false"
+        app:title_textColor="@color/color_333333"
+        app:title_textSize="@dimen/size_18px" />
+
+    <include
+        layout="@layout/common_drop_refresh_layout"
+        />
+</LinearLayout>

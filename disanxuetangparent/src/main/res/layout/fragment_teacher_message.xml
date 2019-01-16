@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_ffffff"
+            android:paddingTop="15dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:text="个人简介"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/size_16sp" />
+
+        <TextView
+            android:id="@+id/tv_rteacher_introduction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_ffffff"
+            android:lineSpacingExtra="3dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/size_12sp"
+            tools:text="本人毕业于上海交通大学中文系博士学位，拥有10年教学经验，多次获得“上海市优秀教职工一等奖”本人毕业于上海交通大学中文系博士学位，拥有10年教学经验，多次获得“上海市优秀教职工一等奖”、本人毕业于上海交通大学中文系博士学位，拥有10年教学经验，多次获得“上海市优秀教职工一等奖”" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/color_ffffff"
+            android:padding="10dp"
+            android:text="毕业院校"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/size_16sp" />
+
+        <TextView
+            android:id="@+id/tv_rteacher_graduate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_ffffff"
+            android:lineSpacingExtra="3dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/size_12sp"
+            tools:text="上海交通大学 博士 中文系国学专业" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/color_ffffff"
+            android:padding="10dp"
+            android:text="教学经历"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/size_16sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/tv_rteacher_experience"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_ffffff"
+            />
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

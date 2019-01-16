@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_home_teacher"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="vertical"
+ >
+    <TextView
+        android:id="@+id/tv_home_teacher_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2016年03月 — 至今  华中师范大学"
+        android:textSize="@dimen/size_12sp"
+        android:textColor="@color/color_333333"
+        />
+    <TextView
+        android:id="@+id/tv_home_teacher_experience"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="工作地点或培训机构工作地点或培训机构工作地点或培训机构工"
+        android:layout_below="@+id/tv_home_teacher_time"
+        android:layout_marginTop="5dp"
+        android:textSize="@dimen/size_12sp"
+        android:textColor="@color/color_333333"
+
+        />
+</LinearLayout>

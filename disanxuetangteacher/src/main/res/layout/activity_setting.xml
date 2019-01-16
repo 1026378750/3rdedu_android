@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f5f5f5">
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:id="@+id/ccb_setting_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background_res="@drawable/status_bgcolor"
+        app:left_button_image="@mipmap/ic_white_left_arrow"
+        app:show_left_button="true"
+        app:title_text="设置"
+        app:isTopBar="true"
+        app:title_textColor="@color/color_ffffff"
+        app:title_textSize="@dimen/size_18px" />
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:id="@+id/ccb_setting_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ccb_setting_head"
+        android:layout_marginTop="10dp"
+        app:bar_background="@color/color_ffffff"
+        app:left_button_text="手机号码"
+        app:left_button_textColor="@color/color_333333"
+        app:left_button_textSize="@dimen/size_15px"
+        app:right_button_text="无"
+        app:right_button_textColor="@color/color_333333"
+        app:right_button_textSize="@dimen/size_15px"
+        />
+
+    <RelativeLayout
+        android:id="@+id/tv_signin_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ccb_setting_phone"
+        android:background="@color/color_ffffff"
+        android:padding="10dp"
+        >
+
+        <com.main.disanxuelib.view.SwitchButton
+            android:id="@+id/sw_signin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:focusable="false"
+            app:kswThumbColor="@color/color_ffffff"
+            app:kswTintColor="@color/color_ff1d97ea"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/size_15sp"
+            android:textColor="@color/color_333333"
+            android:layout_centerVertical="true"
+            android:text="考勤提示"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_notify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/size_10sp"
+        android:textColor="@color/color_999999"
+        android:text="提示，开启提示后，每次上课都会推送考勤提醒。"
+        android:padding="10dp"
+        android:layout_below="@+id/tv_signin_layout"
+        android:layout_alignParentStart="true" />
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:id="@+id/ccb_setting_version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_notify"
+        app:bar_background="@color/color_ffffff"
+        app:left_button_text="版本号"
+        app:left_button_textColor="@color/text1"
+        app:left_button_textSize="@dimen/size_15px"
+        app:right_button_text="v1.0.0"
+        app:show_line="false"
+        app:right_button_textColor="@color/text1"
+        app:right_button_textSize="@dimen/size_15px"
+        />
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:id="@+id/ccb_setting_touchour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ccb_setting_version"
+        android:layout_marginTop="10dp"
+        app:bar_background="@color/color_ffffff"
+        app:left_button_text="联系我们"
+        app:left_button_textColor="@color/text1"
+        app:right_button_image="@mipmap/ic_black_right_arrow"
+        app:show_right_button="true"
+        app:left_button_textSize="@dimen/size_15px" />
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:id="@+id/ccb_setting_aboutour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ccb_setting_touchour"
+        app:bar_background="@color/color_ffffff"
+        app:left_button_text="关于我们"
+        app:left_button_textColor="@color/text1"
+        app:right_button_image="@mipmap/ic_black_right_arrow"
+        app:show_right_button="true"
+        app:left_button_textSize="@dimen/size_15px" />
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:id="@+id/ccb_setting_agreement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ccb_setting_aboutour"
+        app:bar_background="@color/color_ffffff"
+        app:left_button_text="服务协议"
+        app:left_button_textColor="@color/text1"
+        app:right_button_image="@mipmap/ic_black_right_arrow"
+        app:show_right_button="true"
+        app:left_button_textSize="@dimen/size_15px" />
+
+    <Button
+        android:id="@+id/tv_setting_exit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_bg"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/size_15sp"
+        android:text="退出当前账号"
+        android:gravity="center"
+        />
+
+
+
+</RelativeLayout>

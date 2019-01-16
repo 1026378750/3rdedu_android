@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background="@color/color_ffffff"
+        app:left_button_image="@mipmap/ic_black_left_arrow"
+        app:show_left_button="true"
+        app:title_text="订单详情"
+        app:isTopBar="true"
+        app:title_textColor="@color/color_333333"
+        app:title_textSize="@dimen/size_18px" />
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_offline_name"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_ffffff"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/size_16sp"
+                tools:text="科目名称" />
+
+            <com.main.disanxuelib.view.CommonCrosswiseBar
+                android:id="@+id/ccb_offline_clazz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="课程种类"
+                app:left_button_textColor="@color/color_333333"
+                app:left_button_textSize="@dimen/size_14px"
+                app:right_button_text="线下1对1"
+                app:show_line="false"
+                app:right_button_textColor="@color/color_333333"
+                app:right_button_textSize="@dimen/size_14px" />
+
+            <com.main.disanxuelib.view.CommonCrosswiseBar
+                android:id="@+id/ccb_offline_methods"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="授课方式"
+                app:left_button_textColor="@color/color_333333"
+                app:left_button_textSize="@dimen/size_14px"
+                app:right_button_text="授课方式"
+                app:show_line="false"
+                app:right_button_textColor="@color/color_333333"
+                app:right_button_textSize="@dimen/size_14px" />
+
+            <com.main.disanxuelib.view.CommonCrosswiseBar
+                android:id="@+id/ccb_offline_nicename"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="教师昵称"
+                app:left_button_textColor="@color/color_333333"
+                app:left_button_textSize="@dimen/size_14px"
+                app:right_button_text="教师昵称"
+                app:show_line="false"
+                app:right_button_textColor="@color/color_333333"
+                app:right_button_textSize="@dimen/size_14px" />
+
+            <com.main.disanxuelib.view.CommonCrosswiseBar
+                android:id="@+id/ccb_offline_subject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="年级科目"
+                app:left_button_textColor="@color/color_333333"
+                app:left_button_textSize="@dimen/size_14px"
+                app:right_button_text="年级科目"
+                app:show_line="false"
+                app:right_button_textColor="@color/color_333333"
+                app:right_button_textSize="@dimen/size_14px" />
+
+            <com.main.disanxuelib.view.CommonCrosswiseBar
+                android:id="@+id/ccb_offline_times"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="课次"
+                app:left_button_textColor="@color/color_333333"
+                app:left_button_textSize="@dimen/size_14px"
+                app:right_button_text="课次"
+                app:show_line="false"
+                app:right_button_textColor="@color/color_333333"
+                app:right_button_textSize="@dimen/size_14px" />
+
+            <com.main.disanxuelib.view.CommonCrosswiseBar
+                android:id="@+id/ccb_offline_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="课时"
+                app:left_button_textColor="@color/color_333333"
+                app:left_button_textSize="@dimen/size_14px"
+                app:right_button_text="课时"
+                app:show_line="false"
+                app:right_button_textColor="@color/color_333333"
+                app:right_button_textSize="@dimen/size_14px" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/color_ffffff"
+                android:padding="10dp"
+                android:gravity="left"
+                >
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/color_333333"
+                    android:text="上课地址"
+                    />
+
+                <TextView
+                    android:id="@+id/ccb_offline_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textSize="14sp"
+                    android:textColor="@color/color_333333"
+                    tools:text="上课地址"
+                    />
+
+            </LinearLayout>
+
+            <com.main.disanxuelib.view.CommonCrosswiseBar
+                android:id="@+id/ccb_offline_schooltime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="上课时间"
+                app:left_button_textColor="@color/color_333333"
+                app:left_button_textSize="@dimen/size_14px"
+                app:right_button_text="上课时间"
+                app:show_line="false"
+                app:right_button_textColor="@color/color_333333"
+                app:right_button_textSize="@dimen/size_14px" />
+
+            <TextView
+                android:id="@+id/ccb_offline_openall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_ffffff"
+                android:gravity="right"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="查看全部"
+                android:textColor="@color/color_ffae12"
+                android:textSize="@dimen/size_14sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_offline_timelist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_ffffff"
+                android:paddingBottom="10dp"
+                android:visibility="gone" />
+
+            <com.main.disanxuelib.view.CommonCrosswiseBar
+                android:id="@+id/ccb_offline_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="课程单价"
+                app:left_button_textColor="@color/color_333333"
+                app:left_button_textSize="@dimen/size_14px"
+                app:right_button_text="课程单价"
+                app:show_line="false"
+                app:right_button_textColor="@color/color_333333"
+                app:right_button_textSize="@dimen/size_14px" />
+
+            <com.main.disanxuelib.view.CommonCrosswiseBar
+                android:id="@+id/ccb_offline_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="课程总价"
+                app:left_button_textColor="@color/color_333333"
+                app:left_button_textSize="@dimen/size_14px"
+                app:right_button_text="课程总价"
+                app:show_line="false"
+                app:right_button_textColor="@color/color_333333"
+                app:right_button_textSize="@dimen/size_14px" />
+
+            <com.main.disanxuelib.view.CommonCrosswiseBar
+                android:id="@+id/ccb_offline_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="优惠信息"
+                app:left_button_textColor="@color/color_333333"
+                app:left_button_textSize="@dimen/size_14px"
+                app:right_button_text="优惠信息"
+                app:show_line="false"
+                app:right_button_textColor="@color/color_333333"
+                app:right_button_textSize="@dimen/size_14px" />
+
+            <com.main.disanxuelib.view.CommonCrosswiseBar
+                android:id="@+id/ccb_offline_freeprice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="优惠价格"
+                app:left_button_textColor="@color/color_333333"
+                app:left_button_textSize="@dimen/size_14px"
+                app:right_button_text="优惠价格"
+                app:right_button_textColor="@color/color_333333"
+                app:right_button_textSize="@dimen/size_14px" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_e59b10" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_ffffff"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_offline_count"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/size_16sp"
+            tools:text="总额：￥152.00" />
+
+        <TextView
+            android:id="@+id/tv_offline_confirm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:layout_weight="2"
+            android:background="@color/color_ffae12"
+            android:gravity="center"
+            android:text="立即支付"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/size_16sp" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background_res="@drawable/status_bgcolor"
+        app:isTopBar="true"
+        app:left_button_image="@mipmap/ic_white_left_arrow"
+        app:show_left_button="true"
+        app:title_text="基本信息"
+        app:title_textColor="@color/color_ffffff"
+        app:title_textSize="@dimen/size_17px" />
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:id="@+id/ccb_center_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background="@color/color_ffffff"
+        app:left_button_text="头像"
+        app:left_button_textColor="@color/text1"
+        app:left_button_textSize="@dimen/size_15px"
+        app:right_image="@mipmap/ic_personal_avatar"
+        app:show_right_button="true"
+        app:show_right_image="true" />
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:id="@+id/ccb_center_nicename"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:bar_background="@color/color_ffffff"
+        app:left_button_text="昵称"
+        app:left_button_textColor="@color/color_333333"
+        app:left_button_textSize="@dimen/size_14px"
+        app:right_button_hintText="请输入昵称"
+        app:right_button_textColor="@color/color_333333"
+        app:right_button_textHintColor="@color/color_999999"
+        app:right_button_textSize="@dimen/size_14px"
+        app:show_right_button="true" />
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:id="@+id/ccb_center_sex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background="@color/color_ffffff"
+        app:left_button_text="性别"
+        app:left_button_textColor="@color/color_333333"
+        app:left_button_textSize="@dimen/size_14px"
+        app:right_button_hintText="请选择性别"
+        app:right_button_textColor="@color/color_333333"
+        app:right_button_textHintColor="@color/color_999999"
+        app:right_button_textSize="@dimen/size_14px"
+        app:show_right_button="true" />
+
+</LinearLayout>

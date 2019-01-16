@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/2.2.1.iml" filepath="$PROJECT_DIR$/2.2.1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/calendars/calendars.iml" filepath="$PROJECT_DIR$/calendars/calendars.iml" />
+      <module fileurl="file://$PROJECT_DIR$/disanxuelib/disanxuelib.iml" filepath="$PROJECT_DIR$/disanxuelib/disanxuelib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/disanxuetangparent/disanxuetangparent.iml" filepath="$PROJECT_DIR$/disanxuetangparent/disanxuetangparent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/disanxuetangteacher/disanxuetangteacher.iml" filepath="$PROJECT_DIR$/disanxuetangteacher/disanxuetangteacher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lkcamera/lkcamera.iml" filepath="$PROJECT_DIR$/lkcamera/lkcamera.iml" />
+      <module fileurl="file://$PROJECT_DIR$/medialib/medialib.iml" filepath="$PROJECT_DIR$/medialib/medialib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/refreshlib/refreshlib.iml" filepath="$PROJECT_DIR$/refreshlib/refreshlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shortcutbadger/shortcutbadger.iml" filepath="$PROJECT_DIR$/shortcutbadger/shortcutbadger.iml" />
+    </modules>
+  </component>
+</project>

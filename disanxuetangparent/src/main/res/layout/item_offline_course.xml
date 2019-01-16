@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <ImageView
+        android:id="@+id/iv_hot_photo"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/default_error"
+        android:layout_margin="10dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_hot_status"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent_30"
+        android:paddingBottom="3dp"
+        android:paddingTop="3dp"
+        android:gravity="center"
+        tools:text="状态"
+        android:textSize="@dimen/size_9sp"
+        android:layout_alignTop="@+id/iv_hot_photo"
+        android:layout_alignEnd="@+id/iv_hot_photo" />
+
+    <TextView
+        android:id="@+id/tv_hot_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/size_14sp"
+        tools:text="课程名称"
+        android:layout_alignTop="@+id/iv_hot_photo"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/iv_hot_photo" />
+
+    <TextView
+        android:id="@+id/tv_hot_clazz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_hot_time"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/size_11sp"
+        tools:text="课程类型"
+        android:layout_alignEnd="@+id/tv_hot_name"
+        android:layout_alignStart="@+id/tv_hot_name" />
+
+    <TextView
+        android:id="@+id/tv_hot_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/iv_hot_photo"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/iv_hot_photo"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/size_11sp"
+        tools:text="时间" />
+
+    <TextView
+        android:id="@+id/tv_hot_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/iv_hot_photo"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/size_11sp"
+        tools:text="人数"
+        android:layout_alignEnd="@+id/tv_hot_clazz" />
+
+    <RelativeLayout
+        android:id="@+id/rl_hot_teacher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_hot_photo"
+        android:layout_marginBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <ImageView
+            android:id="@+id/iv_hot_teacherimg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/ic_personal_avatar"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/tv_hot_teachername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/iv_hot_teacherimg"
+            android:drawablePadding="15dp"
+            android:drawableRight="@mipmap/ic_launcher"
+            tools:text="TextView"
+            android:textColor="@color/color_333333"
+            android:visibility="gone"
+            android:textSize="@dimen/size_12sp" />
+
+        <TextView
+            android:id="@+id/tv_hot_priprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/color_ffae12"
+            android:textSize="@dimen/size_14sp"
+            tools:text="实际价" />
+
+        <TextView
+            android:id="@+id/tv_hot_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/tv_hot_priprice"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/size_10sp"
+            tools:text="原价" />
+
+    </RelativeLayout>
+    <View
+        android:id="@+id/v_hot_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/background_color"
+        android:layout_below="@+id/rl_hot_teacher"
+        />
+
+</RelativeLayout>

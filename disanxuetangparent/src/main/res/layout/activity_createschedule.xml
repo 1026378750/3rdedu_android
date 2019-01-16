@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background="@color/color_ffffff"
+        app:left_button_image="@mipmap/ic_black_left_arrow"
+        app:show_left_button="true"
+        app:title_text="购买课程"
+        app:isTopBar="true"
+        app:title_textColor="@color/color_333333"
+        app:title_textSize="@dimen/size_18px" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_ffffff"
+        android:gravity="center_vertical"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/iv_createschedule_image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/ic_personal_avatar" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/tv_createschedule_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:text="老师名称"
+                android:maxLength="8"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/size_14sp" />
+
+            <ImageView
+                android:id="@+id/tv_oneone_isplant"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="1dp"
+                android:layout_toEndOf="@+id/tv_createschedule_name"
+                android:src="@mipmap/ic_launcher"
+                android:layout_alignTop="@+id/tv_createschedule_name"
+                android:layout_alignBottom="@+id/tv_createschedule_name"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/tv_createschedule_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tv_createschedule_message"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@+id/tv_createschedule_time"
+                android:gravity="bottom"
+                android:textColor="@color/color_ffae12"
+                android:textSize="@dimen/size_14sp"
+                tools:text="价格" />
+
+            <TextView
+                android:id="@+id/tv_createschedule_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tv_createschedule_message"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:gravity="bottom"
+                android:text="/小时"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/size_10sp" />
+
+
+            <TextView
+                android:id="@+id/tv_createschedule_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_createschedule_name"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/size_12sp"
+                tools:text="老师基础信息" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_createschedule_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/color_ffffff"
+        android:padding="10dp"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/size_14sp"
+        tools:text="课次 10，单次课时长 2小时，共20小时" />
+
+    <TextView
+        android:id="@+id/tv_createschedule_clearall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textColor="@color/color_ffae12"
+        android:gravity="right"
+        android:textSize="@dimen/size_14sp"
+        android:text="清空列表" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_createschedule_recview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_ffae12"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0.5dp"
+            android:layout_weight="2"
+            android:background="@color/color_ffffff"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="总额："
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/size_16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                >
+                <TextView
+                    android:id="@+id/tv_createschedule_payprice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_ffae12"
+                    android:textSize="@dimen/size_16sp"
+                    tools:text="价格"
+
+                    />
+                <TextView
+                    android:id="@+id/tv_createschedule_preprice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/size_11sp"
+                    android:visibility="gone"
+                    tools:text="价格"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_createschedule_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:layout_weight="3"
+            android:background="@color/line_color"
+            android:enabled="false"
+            android:text="继续"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/size_16sp" />
+    </LinearLayout>
+</LinearLayout>

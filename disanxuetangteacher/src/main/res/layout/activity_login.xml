@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/ic_login_bg"
+    >
+
+    <include
+        android:id="@+id/child_login_two"
+        layout="@layout/child_login_two"
+        />
+
+    <View
+        android:id="@+id/child_login_shade"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent_20"
+        />
+
+    <include
+        android:id="@+id/child_login_one"
+        layout="@layout/child_login_one"
+        />
+
+</RelativeLayout>

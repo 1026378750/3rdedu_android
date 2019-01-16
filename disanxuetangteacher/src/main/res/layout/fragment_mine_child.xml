@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_mine_usercenter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_ffffff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/iv_headimage"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:srcCompat="@mipmap/ic_personal_avatar" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_nicename"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="- "
+                    android:textColor="@color/text1"
+                    android:textSize="@dimen/size_14sp" />
+
+                <ImageView
+                    android:id="@+id/iv_mine_isplant"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="5dp"
+                    android:src="@mipmap/ic_teacher_launcher"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_phonenum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="- | -  | - "
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/size_12sp"
+                tools:text="男女 | 科目 | 教龄" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/size_10dp"
+            android:background="@mipmap/ic_black_right_arrow" />
+
+    </LinearLayout>
+
+    <View style="@style/line_style" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/color_ffffff"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_mineorder"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            android:drawableTop="@mipmap/mine_order"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="订单"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/size_12sp" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/line_color" />
+
+        <TextView
+            android:id="@+id/tv_dollars"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            android:drawableTop="@mipmap/mine_dollars"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="钱包"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/size_12sp" />
+
+    </LinearLayout>
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:id="@+id/ccb_information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:bar_background="@color/color_ffffff"
+        app:left_button_image="@mipmap/mine_information"
+        app:left_button_size="@dimen/size_18px"
+        app:left_button_text="个人资料"
+        app:left_button_textColor="@color/color_333333"
+        app:left_button_textSize="@dimen/size_14px"
+        app:right_button_image="@mipmap/ic_black_right_arrow"
+        app:show_left_button="true"
+        app:show_right_button="true" />
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:id="@+id/ccb_certificate_authority"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background="@color/color_ffffff"
+        app:left_button_image="@mipmap/mine_certificate_authority"
+        app:left_button_size="@dimen/size_18px"
+        app:left_button_text="认证中心"
+        app:left_button_textColor="@color/color_333333"
+        app:left_button_textSize="@dimen/size_14px"
+        app:right_button_image="@mipmap/ic_black_right_arrow"
+        app:show_left_button="true"
+        app:show_right_button="true" />
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:id="@+id/ccb_open_class"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background="@color/color_ffffff"
+        app:left_button_image="@mipmap/mine_open_class"
+        app:left_button_size="@dimen/size_18px"
+        app:left_button_text="开课设置"
+        app:left_button_textColor="@color/color_333333"
+        app:left_button_textSize="@dimen/size_14px"
+        app:right_button_image="@mipmap/ic_black_right_arrow"
+        app:show_left_button="true"
+        app:show_right_button="true" />
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:id="@+id/ccb_assistant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background="@color/color_ffffff"
+        app:left_button_image="@mipmap/mine_assistant_"
+        app:left_button_size="@dimen/size_18px"
+        app:left_button_text="我的助教"
+        app:left_button_textColor="@color/color_333333"
+        app:left_button_textSize="@dimen/size_14px"
+        app:right_button_image="@mipmap/ic_black_right_arrow"
+        app:show_left_button="true"
+        app:show_line="false"
+        app:show_right_button="true" />
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:id="@+id/ccb_news"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:bar_background="@color/color_ffffff"
+        app:left_button_image="@mipmap/mine_news"
+        app:left_button_size="@dimen/size_18px"
+        app:left_button_text="消息"
+        app:left_button_textColor="@color/color_333333"
+        app:left_button_textSize="@dimen/size_14px"
+        app:right_button_image="@mipmap/ic_black_right_arrow"
+        app:show_left_button="true"
+        app:show_right_button="true" />
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:id="@+id/ccb_help"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background="@color/color_ffffff"
+        app:left_button_image="@mipmap/ic_help_btn"
+        app:left_button_size="@dimen/size_18px"
+        app:left_button_text="帮助中心"
+        app:left_button_textColor="@color/color_333333"
+        app:left_button_textSize="@dimen/size_14px"
+        app:right_button_image="@mipmap/ic_black_right_arrow"
+        app:show_left_button="true"
+        app:show_line="false"
+        app:show_right_button="true" />
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:id="@+id/ccb_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:bar_background="@color/color_ffffff"
+        app:left_button_image="@mipmap/mine_seting"
+        app:left_button_size="@dimen/size_18px"
+        app:left_button_text="设置"
+        app:left_button_textColor="@color/color_333333"
+        app:left_button_textSize="@dimen/size_14px"
+        app:right_button_image="@mipmap/ic_black_right_arrow"
+        app:show_left_button="true"
+        app:show_line="false"
+        app:show_right_button="true" />
+
+</LinearLayout>

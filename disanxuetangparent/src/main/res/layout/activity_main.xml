@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="49.5dp">
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_size"
+            android:background="@color/line_color" />
+
+        <LinearLayout
+            android:id="@+id/ll_radiolist"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:orientation="horizontal"
+            android:background="@color/color_ffffff"
+            android:layout_below="@+id/view_line"
+            >
+
+            <RadioButton
+                android:id="@+id/rb_home"
+                style="@style/RadioButtonStyle"
+                android:drawableTop="@drawable/btn_home"
+                android:checked="true"
+                android:clickable="false"
+                android:text="@string/home" />
+
+            <RadioButton
+                android:id="@+id/rb_oneone"
+                style="@style/RadioButtonStyle"
+                android:drawableTop="@drawable/btn_shop"
+                android:checked="false"
+                android:clickable="false"
+                android:text="@string/oneonone" />
+
+            <RadioButton
+                android:id="@+id/rb_live"
+                style="@style/RadioButtonStyle"
+                android:drawableTop="@drawable/btn_live"
+                android:checked="false"
+                android:clickable="false"
+                android:text="@string/onlineclass" />
+
+            <RadioButton
+                android:id="@+id/rb_mine"
+                style="@style/RadioButtonStyle"
+                android:drawableTop="@drawable/btn_shopping_car"
+                android:checked="false"
+                android:clickable="false"
+                android:text="@string/mine" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/main_ovlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#88888888"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

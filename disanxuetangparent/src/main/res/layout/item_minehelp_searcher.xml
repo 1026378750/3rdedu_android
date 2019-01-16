@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_ffffff"
+    android:orientation="vertical">
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:id="@+id/ccb_item_searcher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:left_button_text="如何绑定助教？"
+        app:left_button_textColor="@color/color_666666"
+        app:left_button_textSize="@dimen/size_12px"
+        app:right_button_image="@mipmap/ic_black_right_arrow"
+        app:show_right_button="true" />
+    <TextView
+        android:id="@+id/tv_item_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="3dp"
+        android:text="在【首页】点击“需完善”或进入【我的】 - 【个人资料】，编辑基本信息，城市，科目，教龄，毕业院校和个人简介（皆为必填项）。 \n\n个人资料完善后，点击 - 【首页】 - 【我要开课】或【开课设置】即可选择课程类型进行课程添加（设置授课年级，科目，授课方式，价格等）。 \n\n温馨提示：未实名认证，未完善资料的老师可以进行开课设置，但是编辑完成的课程是“已下架”状态并且不会在家长端APP里面展示。\n"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/size_10sp"
+        android:padding="10dp"
+        android:visibility="gone"
+        />
+
+    <View style="@style/line_style" />
+</LinearLayout>

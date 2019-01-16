@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">第三学堂老师</string>
+    <string name="home">首页</string>
+    <string name="course">课表</string>
+    <string name="news">消息</string>
+    <string name="mine">我的</string>
+    <string name="download_title">正在下载新版本</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="content_behavior" translatable="false">com.shengzhe.disan.xuetangteacher.behavior.HeaderScrollBehavior</string>
+</resources>

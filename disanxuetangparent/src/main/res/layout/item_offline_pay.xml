@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_pay_layout"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@drawable/btn_round_white_normal"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    >
+
+    <RadioButton
+        android:id="@+id/rb_pay_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@null"
+        android:clickable="false"
+        android:checked="false"
+        android:textColor="@drawable/selector_textcolor_white666666"
+        tools:text="标题"
+        android:textSize="@dimen/size_12sp" />
+
+    <RadioButton
+        android:id="@+id/rb_pay_subhead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:button="@null"
+        android:clickable="false"
+        android:checked="false"
+        android:textColor="@drawable/selector_textcolor_white666666"
+        tools:text="副标题"
+        android:textSize="@dimen/size_10sp" />
+
+
+</LinearLayout>

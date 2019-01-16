@@ -1,0 +1,17 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background_res="@drawable/status_bgcolor"
+        app:title_textSize="@dimen/size_17px"
+        app:title_text="课表"
+        app:isTopBar="true"
+        app:title_textColor="@color/color_ffffff"
+        />
+
+</RelativeLayout>

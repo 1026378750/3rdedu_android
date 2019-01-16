@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/oldContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:id="@+id/ccb_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background="@color/color_ffffff"
+        app:left_button_image="@mipmap/ic_black_left_arrow"
+        app:show_left_button="true"
+        app:isTopBar="true"
+        app:title_text="品牌课"
+        app:title_textColor="@color/color_333333"
+        app:title_textSize="@dimen/size_18px" />
+
+     <com.baijiahulian.player.BJPlayerView
+        android:id="@+id/bjpv_base"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:aspect_ratio="fit_parent_16_9"
+        app:player_type="android"
+        app:auto_play="true"
+      />
+</LinearLayout>

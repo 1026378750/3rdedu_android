@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/expand_backgrounds"
+    android:padding="@dimen/size_10dp"
+    android:layout_margin="@dimen/size_10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_mine_dollars_month"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/size_17sp"
+        tools:text="2月" />
+</RelativeLayout>

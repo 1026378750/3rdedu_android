@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.main.disanxuelib.view.CommonCrosswiseBar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_calender"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:bar_background="@color/color_ffffff"
+    app:left_button_textColor="@color/color_333333"
+    app:left_button_textSize="16px"
+    app:left_button_text="星期"
+    app:right_button_textSize="@dimen/size_14px"
+    app:right_button_text="日期"
+    app:right_button_textColor="@color/color_666666"
+    app:show_right_button="true"
+    />

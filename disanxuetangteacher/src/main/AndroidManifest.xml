@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.shengzhe.disan.xuetangteacher">
+
+    <uses-permission android:name="${applicationId}.permission.JPUSH_MESSAGE" />
+    <!--<permission
+        android:name="${applicationId}.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />-->
+
+    <application
+        android:name=".app.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AnimationActivity">
+
+        <activity
+            android:name=".activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".service.MyPushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" />
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+
+                <category android:name="com.shengzhe.disan.xuetangteacher" />
+            </intent-filter>
+        </receiver>
+        <!-- 友盟 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5ab21a6cf29d9806520000a9" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="yingyongbao" />
+        <!-- 分享 -->
+        <!-- 支付宝 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <!-- 微信支付 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <!-- QQ -->
+        <activity
+            android:name="com.umeng.qq.tencent.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <!--这里的scheme是qq分享要用的，100424468为自己申请的appid，真实项目中需要替换-->
+                <data android:scheme="tencent1106864438"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.umeng.qq.tencent.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!--
+            <service
+            android:name="com.sina.weibo.sdk.net.DownloadService"
+            android:exported="false" />
+        -->
+        <!-- \sina -->
+        <!-- 调用新浪原生SDK，需要注册的回调activity -->
+
+        <!--   <intent-filter>
+               <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+               <category android:name="android.intent.category.DEFAULT" />
+           </intent-filter>-->
+        <activity
+            android:name=".wxapi.WBShareActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.umeng.socialize.editorpage.ShareActivity"
+            android:excludeFromRecents="true"
+            />
+        <!--  支付宝-->
+        <activity
+            android:name=".apshare.ShareEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.course.StartClassActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.teacher.TeacherDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.order.MineOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.course.OfflineOperatorActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            />
+        <activity
+            android:name=".mvp.activity.course.OnLiveCreateActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.teacher.TeacherPagerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.common.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.common.CommWebActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.common.SystemRelationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.mine.MineCenterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.mine.UserBaseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.mine.ModifyMessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.teacher.TeacherExperienceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.common.SubjectSelectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.common.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.mine.CertificateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.mine.CertifyCenterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.common.IdentityCardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.mine.MineDollarsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.common.OpenCityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.common.IndustrySchoolActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.common.AddressSelectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.common.AreaSelectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.schedule.TimeSelectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.mine.ExperienceItemActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.order.MineOfflineOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.mine.MineMessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.order.MIneLiveOrderDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.schedule.ScheduleTimeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.course.OfflineDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.course.OnLiveDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.schedule.ScheduleCalendarActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.schedule.ModifyCalendarActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.course.OnLiveModifyActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".mvp.activity.mine.MineClazzActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.mine.WithdrawalRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.common.BankCardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.common.AddBankCardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.mine.MinesSistantActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.mine.BindingAssistantActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.mine.ReplaceAssistantActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.course.ClassCreateActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.course.CourseDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.course.CourseBuyerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.course.EditCourseActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.course.ParticipationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.order.OfflineClassOrderDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.course.ClassSumActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.mine.MineHelpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.mine.HelpSearcherActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.mine.HelpDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.activity.teacher.TeacherNewPagerActivity"
+            android:screenOrientation="portrait"/>
+        <receiver
+            android:name=".service.InitApkBroadCastReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <!--
+            7.0以上 相机调用 按照Android N的要求，若要在应用间共享文件，您应发送一项 content://URI，并授予 URI 临时访问权限。
+            而进行此授权的最简单方式是使用 FileProvider类。（修改后的伪代码在讲述FileProvider的使用时会写）
+            说明文档参考 https://developer.android.com/reference/android/support/v4/content/FileProvider.html
+        -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+    </application>
+
+</manifest>

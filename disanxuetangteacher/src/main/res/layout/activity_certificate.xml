@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:id="@+id/ccb_certificate_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background_res="@drawable/status_bgcolor"
+        app:isTopBar="true"
+        app:left_button_image="@mipmap/ic_white_left_arrow"
+        app:show_left_button="true"
+        app:title_text="认证中心"
+        app:title_textColor="@color/color_ffffff"
+        app:title_textSize="@dimen/size_17px" />
+
+    <ImageView
+        android:id="@+id/iv_certificate_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="36dp"
+        android:layout_marginTop="36dp"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/ic_certificate_front" />
+
+    <TextView
+        android:id="@+id/tv_certificate_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="请上传教师资格认证"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/size_12sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <CheckBox
+        android:id="@+id/tv_certificate_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/selector_timer_btn"
+        android:button="@null"
+        android:clickable="false"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="提交认证"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/size_15sp" />
+</LinearLayout>

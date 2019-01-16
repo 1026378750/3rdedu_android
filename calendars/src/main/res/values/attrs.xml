@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--自定义标题栏-->
+    <declare-styleable name="MineMonthPager">
+        <attr name="mmp_backGround" format="color" />
+        <attr name="mmp_normal_textColor" format="color" />
+        <attr name="mmp_checked_textColor" format="color" />
+        <attr name="mmp_textColor" format="color" />
+        <attr name="mmp_selectColor" format="color" />
+        <attr name="mmp_isShwPoint" format="boolean" />
+        <attr name="mmp_textSize" format="dimension" />
+        <attr name="mmp_firstDay">
+            <enum name="Monday" value="0" />
+            <enum name="Sunday" value="1" />
+        </attr>
+        <attr name="mmp_type">
+            <enum name="parent" value="0" />
+            <enum name="teacher" value="1" />
+        </attr>
+        <attr name="mmp_parentType">
+            <enum name="LinearLayout" value="0" />
+            <enum name="RelativeLayout" value="1" />
+            <enum name="CoordinatorLayout" value="2" />
+        </attr>
+    </declare-styleable>
+
+
+</resources>

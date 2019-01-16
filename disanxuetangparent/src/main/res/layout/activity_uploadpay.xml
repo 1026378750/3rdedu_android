@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background="@color/color_ffffff"
+        app:left_button_image="@mipmap/ic_black_left_arrow"
+        app:show_left_button="true"
+        app:title_text="线下支付"
+        app:isTopBar="true"
+        app:title_textColor="@color/color_333333"
+        app:title_textSize="@dimen/size_18px" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_uploadpay_ordernum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_ffffff"
+                android:hint="请输入付款凭证单号"
+                android:padding="10dp"
+                android:textColor="@color/color_333333"
+                android:textColorHint="@color/color_999999"
+                android:textSize="@dimen/size_16sp" />
+
+            <ImageView
+                android:id="@+id/iv_uploadpay_image"
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_ffffff"
+                android:padding="10dp"
+                android:scaleType="center"
+                android:src="@mipmap/icn_take_camera" />
+
+            <TextView
+                android:id="@+id/iv_uploadpay_reupload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_ffffff"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="上传凭证照片"
+                android:textColor="@color/color_ffae12"
+                android:textSize="@dimen/size_14sp" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <RadioButton
+        android:id="@+id/iv_uploadpay_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/selector_shape_btn"
+        android:button="@null"
+        android:checked="false"
+        android:clickable="false"
+        android:gravity="center"
+        android:text="提交审核"
+        android:textColor="@drawable/selector_textcolor_white666666"
+        android:textSize="@dimen/size_16sp" />
+
+</LinearLayout>

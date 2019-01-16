@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background="@color/color_ffffff"
+        app:isTopBar="true"
+        app:left_button_image="@mipmap/ic_black_left_arrow"
+        app:show_left_button="true"
+        app:title_text="订单详情"
+        app:title_textColor="@color/color_333333"
+        app:title_textSize="@dimen/size_17px" />
+    <TextView
+        android:id="@+id/tv_offline_countdown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_ffffff"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textSize="@dimen/size_15sp"
+        android:visibility="gone"
+        tools:text="剩余支付时间：26分钟30秒" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="@dimen/size_10dp"
+                android:background="@color/color_ffffff"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/order_method_mame"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/size_16sp"
+                    tools:text="线下1对1" />
+
+                <TextView
+                    android:id="@+id/order_type_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/order_method_mame"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/size_12sp"
+                    tools:text="老师上门" />
+
+                <TextView
+                    android:id="@+id/order_sub_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="2dp"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/size_14sp"
+                    tools:text="待支付" />
+            </RelativeLayout>
+
+
+            <com.main.disanxuelib.view.CommonCrosswise
+                android:id="@+id/ccb_order_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="订单编号"
+                app:left_button_textColor="@color/color_333333"
+                app:left_button_textSize="@dimen/size_12px"
+                app:title_textSize="@dimen/size_14px" />
+
+            <com.main.disanxuelib.view.CommonCrosswise
+                android:id="@+id/ccb_orderpay_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0.5dp"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="下单时间"
+                app:left_button_textColor="@color/color_333333"
+                app:left_button_textSize="@dimen/size_12px"
+                app:title_textSize="@dimen/size_14px" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <include layout="@layout/item_classcourse" />
+
+            <com.main.disanxuelib.view.CommonCrosswise
+                android:id="@+id/ccb_order_buytype"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="购买类型"
+                app:left_button_textColor="@color/color_333333"
+                app:left_button_textSize="@dimen/size_12px"
+                app:title_textSize="@dimen/size_14px" />
+
+            <com.main.disanxuelib.view.CommonCrosswise
+                android:id="@+id/ccb_order_buytimes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0.5dp"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="购买次数"
+                app:left_button_textColor="@color/color_333333"
+                app:left_button_textSize="@dimen/size_12px"
+                app:title_textSize="@dimen/size_14px" />
+
+            <com.main.disanxuelib.view.CommonCrosswise
+                android:id="@+id/ccb_order_sigleprice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0.5dp"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="课程单价"
+                app:left_button_textColor="@color/color_333333"
+                app:left_button_textSize="@dimen/size_12px"
+                app:title_textSize="@dimen/size_14px" />
+
+            <com.main.disanxuelib.view.CommonCrosswise
+                android:id="@+id/ccb_order_sumprice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0.5dp"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="课程总价"
+                app:left_button_textColor="@color/color_333333"
+                app:left_button_textSize="@dimen/size_12px"
+                app:title_textSize="@dimen/size_14px" />
+
+            <com.main.disanxuelib.view.CommonCrosswise
+                android:id="@+id/ccb_order_free"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="优惠信息"
+                app:left_button_textColor="@color/color_333333"
+                app:left_button_textSize="@dimen/size_12px"
+                app:title_textSize="@dimen/size_14px" />
+
+            <View style="@style/line_style" />
+
+            <com.main.disanxuelib.view.CommonCrosswise
+                android:id="@+id/ccb_order_parentprice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="应付价格"
+                app:left_button_textColor="@color/color_333333"
+                app:left_button_textSize="@dimen/size_12px"
+                app:title_textColor="@color/color_ffae12"
+                app:title_textSize="@dimen/size_18px" />
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <Button
+        android:id="@+id/btn_offlineorder_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_rule_default_ok"
+        android:gravity="center"
+        android:maxLines="1"
+        android:padding="10dp"
+        android:text="立即支付"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/size_16sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_liveorder_delte"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_item_selector"
+        android:gravity="center"
+        android:maxLines="1"
+        android:padding="10dp"
+        android:text="立即支付"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/size_16sp"
+        android:visibility="gone" />
+</LinearLayout>

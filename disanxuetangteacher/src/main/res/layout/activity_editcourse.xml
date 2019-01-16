@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background_res="@drawable/status_bgcolor"
+        app:isTopBar="true"
+        app:left_button_image="@mipmap/ic_white_left_arrow"
+        app:show_left_button="true"
+        app:title_text="编辑课程"
+        app:title_textColor="@color/color_ffffff"
+        app:title_textSize="@dimen/size_17px" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/item_classcourse" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_ffffff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="插班限制"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/size_12sp" />
+
+                <TextView
+                    android:id="@+id/tv_calssone_inlimit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/edittext_shape"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@mipmap/ic_black_down_arrow"
+                    android:ellipsize="end"
+                    android:hint="请选择插班限制"
+                    android:maxLines="1"
+                    android:padding="10dp"
+                    android:textColor="@color/color_333333"
+                    android:textColorHint="@color/color_999999"
+                    android:textSize="@dimen/size_14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_ffffff"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="课程简介"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/size_12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/edittext_shape"
+                    android:gravity="right"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/et_calssone_introduction"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="left"
+                        android:hint="请输入课程简介"
+                        android:lineSpacingExtra="3dp"
+                        android:minLines="3"
+                        android:padding="10dp"
+                        android:textColor="@color/color_333333"
+                        android:textColorHint="@color/color_999999"
+                        android:textSize="@dimen/size_14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_calssone_introduction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="限50-500字"
+                        android:textColor="@color/color_999999"
+                        android:textSize="@dimen/size_10sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_ffffff"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="教学目标"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/size_12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/edittext_shape"
+                    android:gravity="right"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/et_calssone_target"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="left"
+                        android:hint="请输入教学目标"
+                        android:lineSpacingExtra="3dp"
+                        android:minLines="3"
+                        android:padding="10dp"
+                        android:textColor="@color/color_333333"
+                        android:textColorHint="@color/color_999999"
+                        android:textSize="@dimen/size_14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_calssone_target"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="限40-400字"
+                        android:textColor="@color/color_999999"
+                        android:textSize="@dimen/size_10sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_ffffff"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="适用人群"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/size_12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/edittext_shape"
+                    android:gravity="right"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/et_calssone_fitcrowd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="left"
+                        android:hint="请输入适用人群"
+                        android:lineSpacingExtra="3dp"
+                        android:minLines="3"
+                        android:padding="10dp"
+                        android:textColor="@color/color_333333"
+                        android:textColorHint="@color/color_999999"
+                        android:textSize="@dimen/size_14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_calssone_fitcrowd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="限30-300字"
+                        android:textColor="@color/color_999999"
+                        android:textSize="@dimen/size_10sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_calssone_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@drawable/btn_bg"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="保存"
+                android:textColor="@color/color_ffffff"
+                android:textSize="@dimen/size_15sp" />
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

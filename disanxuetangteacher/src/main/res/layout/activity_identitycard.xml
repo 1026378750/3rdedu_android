@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:id="@+id/ccb_certificate_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background_res="@drawable/status_bgcolor"
+        app:isTopBar="true"
+        app:left_button_image="@mipmap/ic_white_left_arrow"
+        app:show_left_button="true"
+        app:title_text="实名认证中心"
+        app:title_textColor="@color/color_ffffff"
+        app:title_textSize="@dimen/size_17px" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_ffffff"
+                android:padding="10dp"
+                android:text="温馨提示"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/size_14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_ffffff"
+                android:lineSpacingExtra="3dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="1. 您的证件信息将为您保密，只用于身份认证，不会挪做他用； \n2. 您必须完善下面所有信息，才能提交认证； \n3. 照片大小不超过5M。"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/size_12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_ffffff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="真实姓名"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/size_14sp" />
+
+                <EditText
+                    android:id="@+id/et_identity_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:hint="请输入真实姓名"
+                    android:padding="10dp"
+                    android:textColor="@color/color_333333"
+                    android:textColorHint="@color/color_999999"
+                    android:textSize="@dimen/size_14sp" />
+
+            </LinearLayout>
+            <View style="@style/line_style"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_ffffff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="证件类型"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/size_14sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:padding="10dp"
+                    android:textColor="@color/color_333333"
+                    android:text="身份证"
+                    android:textSize="@dimen/size_14sp" />
+
+            </LinearLayout>
+            <View style="@style/line_style"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_ffffff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="证件号码"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/size_14sp" />
+
+                <EditText
+                    android:id="@+id/et_identitycard_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="right"
+                    android:hint="请输入证件号码"
+                    android:padding="10dp"
+                    android:textColor="@color/color_333333"
+                    android:textColorHint="@color/color_999999"
+                    android:textSize="@dimen/size_14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_ffffff"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_identity_front"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="36dp"
+                    android:layout_marginRight="36dp"
+                    android:layout_marginTop="36dp"
+                    android:src="@mipmap/ic_certificate_front" />
+
+                <TextView
+                    android:id="@+id/tv_identity_front"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="请上传身份证正面"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/size_12sp" />
+
+                <ImageView
+                    android:id="@+id/iv_identity_contrary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="36dp"
+                    android:layout_marginRight="36dp"
+                    android:layout_marginTop="36dp"
+                    android:src="@mipmap/ic_certificate_reverse" />
+
+                <TextView
+                    android:id="@+id/tv_identity_contrary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="请上传身份证反面"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/size_12sp" />
+
+                <ImageView
+                    android:id="@+id/iv_identity_take"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="36dp"
+                    android:layout_marginRight="36dp"
+                    android:layout_marginTop="36dp"
+                    android:src="@mipmap/ic_certificate_hand" />
+
+                <TextView
+                    android:id="@+id/tv_identity_take"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="请上传手持身份证"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/size_12sp" />
+
+                <CheckBox
+                    android:id="@+id/tv_certificate_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/selector_timer_btn"
+                    android:button="@null"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:text="提交认证"
+                    android:textColor="@color/color_ffffff"
+                    android:textSize="@dimen/size_15sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

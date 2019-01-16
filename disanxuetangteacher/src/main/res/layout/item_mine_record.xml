@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/expand_child_backgrounds"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/expand_child_backgrounds"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/iv_minewall"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/mine_withdraw_deposit"
+             />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/iv_minewall"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_order_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/size_16sp"
+                tools:text="全额提现" />
+
+            <TextView
+                android:id="@+id/bt_mine_type"
+                android:layout_width="50dp"
+                android:layout_height="17dp"
+                tools:text="提现成功"
+                android:gravity="center"
+                android:textColor="@color/color_1d97ea"
+                android:textSize="@dimen/size_10sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_mine_class_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_minewall"
+            android:layout_toEndOf="@+id/iv_minewall"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/size_14sp"
+            tools:text="2月28 12:00" />
+        <TextView
+            android:id="@+id/tv_mine_dollars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_minewall"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/size_14sp"
+            android:layout_alignParentRight="true"
+            tools:text="￥9267.00" />
+        <View
+            android:id="@+id/v_minechild"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line_color"
+            android:layout_below="@+id/tv_mine_class_name"
+            android:layout_marginTop="@dimen/size_10dp"
+            />
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background="@color/color_ffffff"
+        app:left_button_image="@mipmap/ic_black_left_arrow"
+        app:show_left_button="true"
+        app:title_text="地址"
+        app:isTopBar="true"
+        app:title_textColor="@color/color_333333"
+        app:title_textSize="@dimen/size_18px"
+        app:right_button_textSize="@dimen/size_17px"
+        app:right_button_text="保存"
+        app:right_button_textColor="@color/color_ffae12"
+        />
+
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:id="@+id/ccb_address_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background="@color/color_ffffff"
+        android:layout_marginTop="10dp"
+        app:left_button_text="请选择市、区"
+        app:left_button_textColor="@color/color_333333"
+        app:left_button_textSize="@dimen/size_16px"
+        app:right_button_image="@mipmap/ic_black_right_arrow"
+        app:show_right_button="true"
+        />
+
+    <EditText
+        android:id="@+id/ccb_address_detail"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/color_ffffff"
+        android:textSize="@dimen/size_14sp"
+        android:textColor="@color/color_999999"
+        android:hint="请输入街道/楼号/室等详细地址"
+        android:textColorHint="@color/color_999999"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_ffae12"
+        android:textSize="@dimen/size_11sp"
+        android:padding="10dp"
+        android:lineSpacingExtra="2dp"
+        android:text="此版本地址填写适用于线下1对1老师上门授课方式，故仅能选择开通第三学堂的城市区域。"
+        />
+
+</LinearLayout>

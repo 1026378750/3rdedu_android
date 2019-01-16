@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background_res="@drawable/status_bgcolor"
+        app:isTopBar="true"
+        app:title_text="课表"
+        app:title_textColor="@color/color_ffffff"
+        app:title_textSize="@dimen/size_17px" />
+
+    <TextView
+        android:id="@+id/tv_mine_course_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_ffffff"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/size_17sp"
+        tools:text="2017年8月8日" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:background="@color/color_ffffff"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/weekIndicatorStyle"
+            android:text="周一" />
+
+        <TextView
+            style="@style/weekIndicatorStyle"
+            android:text="周二" />
+
+        <TextView
+            style="@style/weekIndicatorStyle"
+            android:text="周三" />
+
+        <TextView
+            style="@style/weekIndicatorStyle"
+            android:text="周四" />
+
+        <TextView
+            style="@style/weekIndicatorStyle"
+            android:text="周五" />
+
+        <TextView
+            style="@style/weekIndicatorStyle"
+            android:text="周六" />
+
+        <TextView
+            style="@style/weekIndicatorStyle"
+            android:text="周日" />
+
+    </LinearLayout>
+
+    <View style="@style/line_style" />
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.ldf.calendar.view.MonthPager
+            android:id="@+id/calendar_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_calendar_height"
+            app:mmp_backGround="#ffffff"
+            app:mmp_checked_textColor="#ffffff"
+            app:mmp_isShwPoint="true"
+            app:mmp_normal_textColor="#999999"
+            app:mmp_parentType="CoordinatorLayout"
+            app:mmp_selectColor="#1d97ea"
+            app:mmp_textColor="#333333"
+            app:mmp_textSize="12px"
+            app:mmp_type="teacher"
+            app:layout_behavior="@string/monthpager_calendar_view_behavior"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_mine_class"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_ffffff"
+            app:layout_behavior="@string/recyclerview_view_behavior"
+            />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:id="@+id/ccb_setting_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background="@color/color_ffffff"
+        app:left_button_image="@mipmap/ic_black_left_arrow"
+        app:show_left_button="true"
+        app:title_text="课程"
+        app:isTopBar="true"
+        app:title_textColor="@color/color_333333"
+        app:title_textSize="@dimen/size_18px" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_ffffff">
+        <!--tab栏-->
+        <com.main.disanxuelib.view.PagerSlidingTabStrip
+            android:id="@+id/psts_common_tables"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/size_14sp"
+            app:pstsDividerColor="@color/line_color"
+            app:pstsIndicatorColor="@color/color_ffae12"
+            app:pstsIndicatorHeight="2dp"
+            app:pstsSelectTabTextColor="@color/color_ffae12"
+            app:pstsSelectTabTextSize="@dimen/size_14sp"
+            app:pstsTabBackground="@color/color_ffffff"
+            app:pstsTextAllCaps="false"
+            app:pstsUnderlineColor="@color/color_ffffff"
+            app:pstsUnderlineHeight="1dp"
+            app:pstsShouldExpand = "true"
+            />
+
+    </RelativeLayout>
+
+    <!--可滑动的布局内容-->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_common_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="1dp"
+        />
+
+    <Button
+        android:id="@+id/tv_solive_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/btn_status_default"
+        android:gravity="center"
+        android:text="立即购买"
+        android:enabled="false"
+        android:textColor="@color/color_ffffff"
+        android:visibility="gone"
+        android:textSize="@dimen/size_16sp" />
+
+</LinearLayout>

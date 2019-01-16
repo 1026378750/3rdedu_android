@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.main.disanxuelib.view.RefreshCommonView
+        android:id="@+id/rcv_mineclass_commonlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:orientation="vertical"
+        app:vessel_type="RecyclerView"
+        app:noneText="暂时没有相关信息哦~"
+        app:bottonViewText="我是有底线的~~~"
+        app:noneImage="@mipmap/ic_norecord"
+        app:content_bgColor="@color/color_ffffff"
+        />
+</LinearLayout>

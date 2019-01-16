@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/background_color">
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background_res="@drawable/status_teacher_bgcolor"
+        app:left_button_image="@mipmap/ic_white_left_arrow"
+        app:show_left_button="true"
+        app:title_text="问题详情"
+        app:isTopBar="true"
+        app:title_textColor="@color/color_ffffff"
+        app:title_textSize="@dimen/size_18px"
+        />
+
+    <TextView
+        android:id="@+id/tv_helpitem_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:background="@color/color_ffffff"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/size_18sp"
+        android:textStyle="bold"
+        tools:text = "标题"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_helpitem_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

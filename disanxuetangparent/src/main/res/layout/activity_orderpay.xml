@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background="@color/color_ffffff"
+        app:left_button_image="@mipmap/ic_black_left_arrow"
+        app:show_left_button="true"
+        app:title_text="支付"
+        app:isTopBar="true"
+        app:title_textColor="@color/color_333333"
+        app:title_textSize="@dimen/size_18px" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <com.main.disanxuelib.view.CommonCrosswiseBar
+                android:id="@+id/ccb_orderpay_money"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="支付金额"
+                app:left_button_textColor="@color/color_333333"
+                app:left_button_textSize="@dimen/size_16px"
+                app:right_button_text="金额"
+                app:right_button_textColor="@color/color_ffae12"
+                app:right_button_textSize="@dimen/size_20px" />
+
+            <LinearLayout
+                android:id="@+id/ll_orderpay_deductionlay"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/color_ffffff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="钱包余额抵扣"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/size_16sp" />
+
+                <TextView
+                    android:id="@+id/tv_orderpay_deduction"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/size_14sp"
+                    tools:text="可抵扣" />
+
+                <RadioButton
+                    android:id="@+id/rb_orderpay_deductionbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/checkbox_selectors"
+                    android:clickable="false"
+                    android:checked="false"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_ffffff"
+                android:gravity="right|center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_ffffff"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/size_16sp"
+                    android:text="剩余应付金额：" />
+
+                <TextView
+                    android:id="@+id/tv_orderpay_gpfdpay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_ffae12"
+                    android:textSize="@dimen/size_20sp"
+                    tools:text="￥152.00" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_order_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/size_14sp"
+                android:text="请选择支付方式" />
+
+
+            <RelativeLayout
+                android:id="@+id/rl_orderpay_offlinepay"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/color_ffffff"
+                android:visibility="gone"
+                android:layout_marginBottom="10dp"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="线下支付"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/size_16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="如果您已在线下校区支付了全额费用或定金请选择"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/size_11sp"
+                    android:layout_alignParentBottom="true"
+                    android:id="@+id/textView" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_black_right_arrow"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_order_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/color_ffffff"
+                >
+                <com.main.disanxuelib.view.CommonCrosswiseBar
+                    android:id="@+id/ccb_orderpay_alipay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    app:bar_background="@color/color_ffffff"
+                    app:left_button_text="支付宝"
+                    app:left_button_textColor="@color/color_333333"
+                    app:left_button_textSize="@dimen/size_16px"
+                    app:left_button_image="@mipmap/ic_ali_pay"
+                    app:show_left_button="true"
+                    app:right_button_image="@mipmap/btn_checked"
+                    app:show_right_button="true"
+                    />
+
+                <com.main.disanxuelib.view.CommonCrosswiseBar
+                    android:id="@+id/ccb_orderpay_wchatpay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    app:bar_background="@color/color_ffffff"
+                    app:left_button_text="微信"
+                    app:left_button_textColor="@color/color_333333"
+                    app:left_button_textSize="@dimen/size_16px"
+                    app:left_button_image="@mipmap/ic_wchat_pay"
+                    app:show_left_button="true"
+                    app:right_button_image="@mipmap/btn_unchecked"
+                    app:show_right_button="true"
+                    app:title_text=""
+                    />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/tv_liveorder_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:background="@color/color_ffae12"
+        android:gravity="center"
+        android:text="确认支付"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/size_16sp" />
+</LinearLayout>

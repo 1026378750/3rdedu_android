@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mbg.library.RefreshRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rrl_refresh_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/rbl_top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_00000000"
+            android:orientation="vertical">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <com.main.disanxuelib.view.banner.MyBanner
+                    android:id="@+id/mb_home_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="215dp"
+                    app:layout_collapseMode="parallax"
+                    app:layout_scrollFlags="scroll" />
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/appbar_layout_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:contentInsetStart="0dp"
+                    app:layout_collapseMode="pin">
+
+                    <RelativeLayout
+                        android:id="@+id/top_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingTop="5dp">
+
+                        <TextView
+                            android:id="@+id/tx_main_choosecity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/bg_right_white"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:lines="1"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="10dp"
+                            android:textColor="@color/color_ffffff"
+                            android:textSize="@dimen/size_12sp"
+                            tools:text="上海市" />
+
+                        <RelativeLayout
+                            android:id="@+id/tx_main_searchlayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_toRightOf="@id/tx_main_choosecity"
+                            android:background="@drawable/popup_white_corners_10">
+
+                            <TextView
+                                android:id="@+id/tx_main_search"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="请输入老师昵称/课程名称查找"
+                                android:textColor="@color/color_ffffff"
+                                android:textSize="@dimen/size_13sp" />
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/top_line"
+                            style="@style/line_style"
+                            android:visibility="gone"
+                            android:layout_below="@+id/tx_main_searchlayout"/>
+                    </RelativeLayout>
+
+                </android.support.v7.widget.Toolbar>
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_home_courseclazz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_ffffff" />
+        </android.support.design.widget.AppBarLayout>
+
+        <com.main.disanxuelib.view.MyFloatingActionButton
+            android:id="@+id/iv_apply_audition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="50dp"
+            android:src="@mipmap/ic_apply_audition"
+            app:fab_elevationCompat="4dp" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nsv_scroll_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/rl_home_notify_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="41dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/color_4dffae12"
+                    android:visibility="gone"
+                    app:layout_scrollFlags="scroll">
+
+                    <TextView
+                        android:id="@+id/tv_home_notify"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:drawableLeft="@mipmap/ic_home_alarmclock"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        android:text="测试数据"
+                        android:textColor="@color/color_7a5309"
+                        android:textSize="@dimen/size_12sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_home_notify_close"
+                        android:layout_width="41dp"
+                        android:layout_height="41dp"
+                        android:padding="10dp"
+                        android:src="@mipmap/ic_chat_close_popupwindow" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_home_recommend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/color_ffffff"
+                    android:drawableRight="@mipmap/ic_black_right_arrow"
+                    android:padding="10dp"
+                    android:text="推荐班课"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/size_15sp"
+                    android:visibility="gone" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_home_recommend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_ffffff"
+                    android:paddingLeft="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingRight="5dp"
+                    android:visibility="gone" />
+
+                <View style="@style/line_style" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_ffffff"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/iv_home_brand"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/ic_main_brandbg" />
+
+                    <ImageView
+                        android:id="@+id/iv_home_onlive"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/ic_main_onlivebg" />
+
+                </LinearLayout>
+
+                <View style="@style/line_style" />
+
+                <TextView
+                    android:id="@+id/tv_home_oneone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_ffffff"
+                    android:padding="10dp"
+                    android:text="推荐老师"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/size_15sp"
+                    android:visibility="gone" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rc_home_oneone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_ffffff"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/common_refresh_none"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/common_refresh_noneimage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_norecord" />
+
+                    <TextView
+                        android:id="@+id/common_refresh_nonetext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/color_999999"
+                        android:textSize="@dimen/size_14sp"
+                        tools:text="暂无推荐信息！~" />
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.design.widget.CoordinatorLayout>
+
+</com.mbg.library.RefreshRelativeLayout>

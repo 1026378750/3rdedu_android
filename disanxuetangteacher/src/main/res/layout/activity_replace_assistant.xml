@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:id="@+id/ccb_dollar_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background = "@color/color_ffffff"
+        app:isTopBar="true"
+        app:left_button_image="@mipmap/ic_blank_left_arrow"
+        app:show_left_button="true"
+        app:title_text="更换助教"
+        app:title_textColor="@color/color_333333"
+        app:title_textSize="@dimen/size_17px" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/size_10dp"
+        android:text="你确定要申请更换助教？" />
+
+    <EditText
+        android:id="@+id/et_replaceassistant_cause"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/size_10dp"
+        android:layout_marginTop="@dimen/size_10dp"
+        android:background="@drawable/bg_edittext_shape"
+        android:hint="请输入更换原因"
+        android:padding="13dp"
+        android:textColor="@color/color_333333"
+        android:textColorHint="@color/color_d8d8d8"
+        android:textSize="@dimen/size_14sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/tv_center_comfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/selector_timer_btn"
+            android:button="@null"
+            android:clickable="false"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="保存"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/size_15sp" />
+    </LinearLayout>
+
+
+</LinearLayout>

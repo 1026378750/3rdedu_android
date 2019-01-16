@@ -1,0 +1,17 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    >
+
+    <Button
+        android:id="@+id/bt_content"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@drawable/btn_rule_white_pressed"
+        android:text="上海"
+        android:textColor="@color/color_ffae12"
+        android:textSize="@dimen/size_14sp" />
+
+
+</LinearLayout>

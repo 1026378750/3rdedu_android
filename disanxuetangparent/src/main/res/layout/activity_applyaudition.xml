@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background="@color/color_ffffff"
+        app:isTopBar="true"
+        app:left_button_image="@mipmap/ic_black_left_arrow"
+        app:show_left_button="true"
+        app:title_text="申请试听"
+        app:title_textColor="@color/color_333333"
+        app:title_textSize="@dimen/size_18px" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:drawableLeft="@mipmap/ic_small_book"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:padding="15dp"
+        android:text="免费试听只需三步"
+        android:textColor="@color/color_ffae12"
+        android:textSize="@dimen/size_14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@mipmap/ic_apply_bg"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <com.main.disanxuelib.view.CommonCrosswiseBar
+            android:id="@+id/ccb_apply_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:left_button_text="您的城市"
+            app:left_button_textColor="@color/color_333333"
+            app:left_button_textSize="@dimen/size_14px"
+            app:right_button_image="@mipmap/ic_black_right_arrow"
+            app:right_button_textSize="@dimen/size_14px"
+            app:right_button_textColor="@color/color_333333"
+            app:show_right_button="true" />
+
+        <com.main.disanxuelib.view.CommonCrosswiseBar
+            android:id="@+id/ccb_apply_grade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:left_button_text="孩子年级"
+            app:left_button_textColor="@color/color_333333"
+            app:left_button_textSize="@dimen/size_14px"
+            app:right_button_image="@mipmap/ic_black_right_arrow"
+            app:right_button_textSize="@dimen/size_14px"
+            app:right_button_textColor="@color/color_333333"
+            app:show_right_button="true" />
+
+        <com.main.disanxuelib.view.CommonCrosswiseBar
+            android:id="@+id/ccb_apply_subject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:left_button_text="意向科目"
+            app:left_button_textColor="@color/color_333333"
+            app:left_button_textSize="@dimen/size_14px"
+            app:right_button_image="@mipmap/ic_black_right_arrow"
+            app:right_button_textSize="@dimen/size_14px"
+            app:right_button_textColor="@color/color_333333"
+            app:show_right_button="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/size_10sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="8dp"
+            android:text="平台仅支持在开通第三学堂的城市申请试听。"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_apply_submit"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/btn_bg_default_cancel"
+        android:text="申请试听"
+        android:enabled="false"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/size_14sp" />
+</LinearLayout>

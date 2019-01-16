@@ -1,0 +1,32 @@
+<resources>
+    <string name="unknownException">程序出现未知的错误_E000000</string>
+    <string name="noNetWork">网络君去外星吃饭了，稍后再试~</string>
+    <string name="timeout">网络请求超时，请稍后再试~</string>
+    <string name="unavailable">网络请求异常，请稍后再试~</string>
+    <string name="connectTimeOutException">数据请求失败_E001</string>//请求超时
+    <string name="socketTimeOutException">数据请求失败_E002</string>//响应超时(请求成功)
+    <string name="refused">数据请求失败_E003</string>//连接拒绝
+    <string name="notFound">数据请求失败_E004</string>//404
+    <string name="noHttpResponseException">数据请求失败_E005</string>//服务器无响应
+    <string name="connectException">数据请求失败_E006</string>//服务器无响应
+    <string name="unknownHostException">数据请求失败_E007</string>//地址解析异常（网络不可用或url解析错误）
+    <string name="malformedURLException">数据请求失败_E008</string>//协议格式异常
+    <string name="EOFException">数据请求失败_E009</string>//协议格式异常
+    <string name="IOException">数据请求失败_E010</string>//IO异常
+    <string name="InternalServerError">数据请求失败_E011</string>//Internal Server Error
+    <string name="httpSubmitContextNull">数据解析出错_E021</string>//http请求时context为null
+    <string name="dataAnalysisPostParamException">数据解析出错_E022</string>//post参数处理异常
+    <string name="dataAnalysisReturnNullException">数据解析出错_E023</string>//无返回数据
+    <string name="JsonSyntaxException">数据解析出错_E024</string>
+    <string name="tokenisnull">请登录！</string>
+    <string name="tokenVerifyFail">请登录！</string>
+    <string name="tokenVerifyExpire">您的账号已过期，为确保信息安全，请重新登录！</string>
+    <string name="missingParameter">缺少参数_E000001</string>
+    <string name="systemExpire">系统异常</string>
+    <string name="userSecurity">验证码超时，请重新获取</string>
+    <string name="userMoblie">获取手机验证码失败</string>
+    <string name="userParameterFail">参数验证失败</string>
+    <string name="userSecurityAgain">验证码有误，请重新获取</string>
+
+    <string name="view_bottom_behavior" translatable="false">com.main.disanxuelib.behavior.BottomBehavior</string>
+</resources>

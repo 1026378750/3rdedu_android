@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_f5f5f5"
+    android:orientation="vertical">
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:id="@+id/ccb_relation_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background_res="@drawable/status_bgcolor"
+        app:left_button_image="@mipmap/ic_white_left_arrow"
+        app:show_left_button="true"
+        app:isTopBar="true"
+        app:title_text="联系我们"
+        app:title_textColor="@color/color_ffffff"
+        app:title_textSize="@dimen/size_18px" />
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:id="@+id/sw_tv_servicecall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:bar_background="@color/color_ffffff"
+        app:left_button_text="客服电话"
+        app:left_button_textColor="@color/color_333333"
+        app:left_button_textSize="@dimen/size_16px"
+        app:right_button_text="400-400-5666"
+        app:show_line="false"
+        app:right_button_textColor="@color/color_3a7bd5"
+        app:right_button_textSize="@dimen/size_16px" />
+
+    <com.shengzhe.disan.xuetangteacher.view.X5WebView
+        android:id="@+id/x5wv_connectwe"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:background="@color/color_ffffff" />
+</LinearLayout>

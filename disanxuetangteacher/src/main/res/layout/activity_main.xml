@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/view_line" />
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_size"
+        android:layout_above="@+id/ll_radiolist"
+        android:background="@color/line_color" />
+
+    <LinearLayout
+        android:id="@+id/ll_radiolist"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_ffffff"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_home"
+            style="@style/RadioButtonStyle"
+            android:checked="true"
+            android:clickable="false"
+            android:drawableTop="@drawable/btn_home"
+            android:text="@string/home" />
+
+        <RadioButton
+            android:id="@+id/rb_course"
+            style="@style/RadioButtonStyle"
+            android:checked="false"
+            android:clickable="false"
+            android:drawableTop="@drawable/btn_course"
+            android:text="@string/course" />
+
+        <RadioButton
+            android:id="@+id/rb_mine"
+            style="@style/RadioButtonStyle"
+            android:checked="false"
+            android:clickable="false"
+            android:drawableTop="@drawable/btn_mine"
+            android:text="@string/mine" />
+
+    </LinearLayout>
+</RelativeLayout>

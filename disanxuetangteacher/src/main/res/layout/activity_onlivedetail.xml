@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:id="@+id/onLiveDetail_ccb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background_res="@drawable/status_bgcolor"
+        app:isTopBar="true"
+        app:left_button_image="@mipmap/ic_white_left_arrow"
+        app:show_left_button="true"
+        app:title_text="在线直播课"
+        app:title_textColor="@color/color_ffffff"
+        app:title_textSize="@dimen/size_17px"
+        app:right_button_text="编辑"
+        app:right_button_textColor="@color/color_ffffff"
+        app:right_button_textSize="@dimen/size_14px"
+        />
+
+    <com.main.disanxuelib.view.PagerSlidingTabStrip
+        android:id="@+id/pst_onlivedetail_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/size_12sp"
+        app:pstsIndicatorColor="@color/color_ff1d97ea"
+        app:pstsIndicatorHeight="2dp"
+        app:pstsSelectTabTextColor="@color/color_ff1d97ea"
+        app:pstsSelectTabTextSize="@dimen/size_14sp"
+        app:pstsShouldExpand="true"
+        app:pstsTextAllCaps="false"
+        app:pstsDividerColor = "@color/color_00000000"
+        app:pstsTabBackground="@color/color_ffffff"
+        app:pstsUnderlineColor="@color/color_ffffff"
+        app:pstsUnderlineHeight="1dp" />
+
+    <!--可滑动的布局内容-->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_onlivedetail_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</LinearLayout>

@@ -1,0 +1,142 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg1"
+    android:orientation="vertical">
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background="@color/color_ffffff"
+        app:isTopBar="true"
+        app:left_button_image="@mipmap/ic_black_left_arrow"
+        app:show_left_button="true"
+        app:title_text="个人资料"
+        app:title_textColor="@color/color_333333"
+        app:title_textSize="@dimen/size_17px" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <com.main.disanxuelib.view.CommonCrosswiseBar
+                android:id="@+id/ccb_userhead"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="头像"
+                app:left_button_textColor="@color/text1"
+                app:left_button_textSize="@dimen/size_15px"
+                app:show_line="false"
+                app:right_image="@mipmap/ic_personal_avatar"
+                app:show_right_button="true"
+                app:show_right_image="true" />
+
+            <com.main.disanxuelib.view.CommonCrosswiseBar
+                android:id="@+id/ccb_usernicename"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="昵称"
+                app:left_button_textColor="@color/text1"
+                app:left_button_textSize="@dimen/size_15px"
+                app:right_button_hintText="请输入昵称"
+                app:right_button_image="@mipmap/ic_black_right_arrow"
+                app:right_button_textColor="@color/text1"
+                app:right_button_textHintColor="@color/text2"
+                app:right_button_textSize="@dimen/size_15px"
+                app:show_right_button="true" />
+
+            <com.main.disanxuelib.view.CommonCrosswiseBar
+                android:id="@+id/ccb_studentname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="学生姓名"
+                app:left_button_textColor="@color/text1"
+                app:left_button_textSize="@dimen/size_15px"
+                app:right_button_hintText="请输入学生姓名"
+                app:right_button_image="@mipmap/ic_black_right_arrow"
+                app:right_button_textColor="@color/text1"
+                app:right_button_textHintColor="@color/text2"
+                app:right_button_textSize="@dimen/size_15px"
+                app:show_right_button="true" />
+
+            <com.main.disanxuelib.view.CommonCrosswiseBar
+                android:id="@+id/ccb_studentclass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="学生年级"
+                app:left_button_textColor="@color/text1"
+                app:left_button_textSize="@dimen/size_15px"
+                app:right_button_hintText="请选择学生年级"
+                app:right_button_image="@mipmap/ic_black_right_arrow"
+                app:right_button_textColor="@color/text1"
+                app:right_button_textHintColor="@color/text2"
+                app:right_button_textSize="@dimen/size_15px"
+                app:show_right_button="true" />
+
+            <com.main.disanxuelib.view.CommonCrosswiseBar
+                android:id="@+id/ccb_studentsex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="学生性别"
+                app:left_button_textColor="@color/text1"
+                app:left_button_textSize="@dimen/size_15px"
+                app:right_button_hintText="请选择学生性别"
+                app:right_button_image="@mipmap/ic_black_right_arrow"
+                app:right_button_textColor="@color/text1"
+                app:right_button_textHintColor="@color/text2"
+                app:right_button_textSize="@dimen/size_15px"
+                app:show_right_button="true" />
+
+            <com.main.disanxuelib.view.CommonCrosswiseBar
+                android:id="@+id/ccb_studentschool"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="目前就读学校"
+                app:left_button_textColor="@color/text1"
+                app:left_button_textSize="@dimen/size_15px"
+                app:right_button_hintText="请输入学生目前就读学校"
+                app:right_button_image="@mipmap/ic_black_right_arrow"
+                app:right_button_textColor="@color/text1"
+                app:right_button_textHintColor="@color/text2"
+                app:right_button_textSize="@dimen/size_15px"
+                app:show_right_button="true" />
+
+            <com.main.disanxuelib.view.CommonCrosswiseBar
+                android:id="@+id/ccb_studentaddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="地址"
+                app:left_button_textColor="@color/text1"
+                app:left_button_textSize="@dimen/size_15px"
+                app:right_button_hintText="请输入地址(不填写不支持老师上门)"
+                app:right_button_image="@mipmap/ic_black_right_arrow"
+                app:right_button_textColor="@color/text1"
+                app:right_button_textHintColor="@color/text2"
+                app:right_button_textSize="@dimen/size_15px"
+                app:show_right_button="true" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>
+
+

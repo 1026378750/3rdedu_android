@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background="@color/color_ffffff"
+        app:left_button_image="@mipmap/ic_black_left_arrow"
+        app:show_left_button="true"
+        app:title_text="订单详情"
+        app:isTopBar="true"
+        app:title_textColor="@color/color_333333"
+        app:title_textSize="@dimen/size_18px" />
+    <TextView
+        android:id="@+id/tv_offline_countdown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/color_ffffff"
+        android:padding="10dp"
+        android:text="剩余支付时间：26分钟30秒"
+        android:textSize="@dimen/size_15sp"
+        android:visibility="gone"
+        />
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv_liveorder_name"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_ffffff"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/size_16sp"
+                tools:text="科目名称" />
+
+            <com.main.disanxuelib.view.CommonCrosswiseBar
+                android:id="@+id/ccb_liveorder_ordernum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="订单编号"
+                app:left_button_textColor="@color/color_333333"
+                app:left_button_textSize="@dimen/size_14px"
+                app:right_button_text="无"
+                app:show_line="false"
+                app:right_button_textColor="@color/color_333333"
+                app:right_button_textSize="@dimen/size_14px" />
+
+            <com.main.disanxuelib.view.CommonCrosswiseBar
+                android:id="@+id/ccb_liveorder_ordertime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="下单时间"
+                app:left_button_textColor="@color/color_333333"
+                app:left_button_textSize="@dimen/size_14px"
+                app:right_button_text="无"
+                app:right_button_textColor="@color/color_333333"
+                app:right_button_textSize="@dimen/size_14px" />
+
+
+            <com.main.disanxuelib.view.CommonCrosswiseBar
+                android:id="@+id/ccb_liveorder_clazz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="课程种类"
+                app:left_button_textColor="@color/color_333333"
+                app:left_button_textSize="@dimen/size_14px"
+                app:right_button_text="无"
+                app:show_line="false"
+                app:right_button_textColor="@color/color_333333"
+                app:right_button_textSize="@dimen/size_14px" />
+
+            <com.main.disanxuelib.view.CommonCrosswiseBar
+                android:id="@+id/ccb_liveorder_methods"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="直播类型"
+                app:left_button_textColor="@color/color_333333"
+                app:left_button_textSize="@dimen/size_14px"
+                app:right_button_text="无"
+                app:show_line="false"
+                app:right_button_textColor="@color/color_333333"
+                app:right_button_textSize="@dimen/size_14px" />
+
+            <com.main.disanxuelib.view.CommonCrosswiseBar
+                android:id="@+id/ccb_live_teachname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="老师昵称"
+                app:left_button_textColor="@color/color_333333"
+                app:left_button_textSize="@dimen/size_14px"
+                app:right_button_text="无"
+                app:show_line="false"
+                app:right_button_textColor="@color/color_333333"
+                app:right_button_textSize="@dimen/size_14px" />
+
+            <com.main.disanxuelib.view.CommonCrosswiseBar
+                android:id="@+id/ccb_liveorder_subject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="年级科目"
+                app:left_button_textColor="@color/color_333333"
+                app:left_button_textSize="@dimen/size_14px"
+                app:right_button_text="无"
+                app:show_line="false"
+                app:right_button_textColor="@color/color_333333"
+                app:right_button_textSize="@dimen/size_14px" />
+
+            <com.main.disanxuelib.view.CommonCrosswiseBar
+                android:id="@+id/ccb_liveorder_times"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="次数"
+                app:left_button_textColor="@color/color_333333"
+                app:left_button_textSize="@dimen/size_14px"
+                app:right_button_text="无"
+                app:show_line="false"
+                app:right_button_textColor="@color/color_333333"
+                app:right_button_textSize="@dimen/size_14px" />
+
+            <com.main.disanxuelib.view.CommonCrosswiseBar
+                android:id="@+id/ccb_liveorder_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="课时"
+                app:left_button_textColor="@color/color_333333"
+                app:left_button_textSize="@dimen/size_14px"
+                app:right_button_text="无"
+                app:right_button_textColor="@color/color_333333"
+                app:right_button_textSize="@dimen/size_14px" />
+            <com.main.disanxuelib.view.CommonCrosswiseBar
+                android:id="@+id/ccb_liveorder_adress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="上课地址"
+                app:left_button_textColor="@color/color_333333"
+                app:left_button_textSize="@dimen/size_14px"
+                app:right_button_text="无"
+                android:visibility="gone"
+                app:show_line="false"
+                app:right_button_textColor="@color/color_333333"
+                app:right_button_textSize="@dimen/size_14px" />
+
+            <com.main.disanxuelib.view.CommonCrosswiseBar
+                android:id="@+id/ccb_liveorder_schooltime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="上课时间"
+                app:left_button_textColor="@color/color_333333"
+                app:left_button_textSize="@dimen/size_14px"
+                app:right_button_text="无"
+                app:show_line="false"
+                app:right_button_textColor="@color/color_333333"
+                app:right_button_textSize="@dimen/size_14px" />
+
+            <TextView
+                android:id="@+id/tv_open_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_ffffff"
+                android:gravity="right"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="查看全部"
+                android:textColor="@color/color_ffae12"
+                android:textSize="@dimen/size_14sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_liveorder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_ffffff"
+                android:paddingBottom="10dp"/>
+
+            <com.main.disanxuelib.view.CommonCrosswiseBar
+                android:id="@+id/ccb_liveorder_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="课程单价"
+                app:left_button_textColor="@color/color_333333"
+                app:left_button_textSize="@dimen/size_14px"
+                app:right_button_text="0.00"
+                app:show_line="false"
+                app:right_button_textColor="@color/color_333333"
+                app:right_button_textSize="@dimen/size_14px" />
+
+            <com.main.disanxuelib.view.CommonCrosswiseBar
+                android:id="@+id/ccb_liveorder_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="课程总价"
+                app:left_button_textColor="@color/color_333333"
+                app:left_button_textSize="@dimen/size_14px"
+                app:right_button_text="0.00"
+                app:show_line="false"
+                app:right_button_textColor="@color/color_333333"
+                app:right_button_textSize="@dimen/size_14px" />
+
+            <com.main.disanxuelib.view.CommonCrosswiseBar
+                android:id="@+id/ccb_liveorder_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="优惠信息"
+                app:left_button_textColor="@color/color_333333"
+                app:left_button_textSize="@dimen/size_14px"
+                app:right_button_text="无"
+                app:right_button_textColor="@color/color_333333"
+                app:right_button_textSize="@dimen/size_14px" />
+
+            <com.main.disanxuelib.view.CommonCrosswiseBar
+                android:id="@+id/ccb_liveorder_freeprice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bar_background="@color/color_ffffff"
+                app:left_button_text="优惠金额"
+                app:left_button_textColor="@color/color_333333"
+                app:left_button_textSize="@dimen/size_14px"
+                app:right_button_text="无"
+                app:right_button_textColor="@color/color_333333"
+                app:right_button_textSize="@dimen/size_14px" />
+
+            <TextView
+                android:id="@+id/tv_mine_already"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/color_ffffff"
+                android:gravity="right"
+                android:padding="10dp"
+                android:text="已支付：￥152.02"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/size_17sp"
+                />
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/btn_liveorder_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/btn_rule_default_ok"
+        android:text="立即支付"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textSize="@dimen/size_16sp"
+        android:textColor="@color/color_ffffff"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/tv_liveorder_delte"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/btn_item_selector"
+        android:text="立即支付"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textSize="@dimen/size_16sp"
+        android:textColor="@color/color_ffffff"
+        android:visibility="gone"
+        />
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <RadioButton
+        android:id="@+id/history_text"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:background="@drawable/search_item_bg_selector"
+        android:clickable="false"
+        android:button="@null"
+        android:checked="false"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:minWidth="120dp"
+        android:textColor="@drawable/selector_textcolor_white666666"
+        tools:text="按钮按钮"
+        android:textSize="10sp"/>
+</LinearLayout>

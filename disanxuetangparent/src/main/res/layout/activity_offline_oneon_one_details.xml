@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background="@color/color_ffffff"
+        app:isTopBar="true"
+        app:left_button_image="@mipmap/ic_black_left_arrow"
+        app:show_left_button="true"
+        app:title_text="课程"
+        app:title_textColor="@color/color_333333"
+        app:title_textSize="@dimen/size_17px" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_ffffff"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_offline_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/size_14sp"
+                    tools:text="标题名称" />
+
+                <TextView
+                    android:id="@+id/tv_offline_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="40dp"
+                    android:textColor="@color/color_ffae12"
+                    android:textSize="@dimen/size_14sp"
+                    tools:text="价格" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignBottom="@+id/tv_offline_price"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="1dp"
+                    android:gravity="bottom"
+                    android:text="/小时起"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/size_9sp" />
+
+                <TextView
+                    android:id="@+id/tv_offline_preprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/tv_offline_price"
+                    android:layout_marginTop="2dp"
+                    android:gravity="right"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/size_10sp"
+                    tools:text="原价"
+
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/iv_offline_back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/color_ffffff"
+                android:paddingBottom="15dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="15dp">
+
+                <ImageView
+                    android:id="@+id/iv_offline_image"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/ic_personal_avatar" />
+
+                <TextView
+                    android:id="@+id/tv_offline_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toEndOf="@+id/iv_offline_image"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:text="老师名称"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/size_14sp" />
+
+                <ImageView
+                    android:id="@+id/iv_offline_plat"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_alignBottom="@+id/tv_offline_name"
+                    android:layout_alignTop="@+id/tv_offline_name"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_toEndOf="@+id/tv_offline_name"
+                    android:src="@mipmap/ic_launcher"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_offline_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/tv_offline_name"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/size_12sp"
+                    tools:text="老师基础信息" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignStart="@+id/tv_offline_name"
+                    android:layout_marginTop="5dp">
+
+                    <ImageView
+                        android:id="@+id/iv_quality_certification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="11dp"
+                        android:scaleType="fitStart"
+                        android:src="@mipmap/ic_quality_certification"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/iv_realname_certification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="11dp"
+                        android:scaleType="fitStart"
+                        android:src="@mipmap/ic_realname_authentication"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/iv_teacher_certification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="11dp"
+                        android:scaleType="fitStart"
+                        android:src="@mipmap/ic_teacher_certification"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/iv_education_certification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="11dp"
+                        android:scaleType="fitStart"
+                        android:src="@mipmap/ic_education_certification"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ic_black_right_arrow" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_ffffff"
+                android:drawableLeft="@mipmap/class_details"
+                android:drawablePadding="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="15dp"
+                android:text="课程须知"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/size_14sp" />
+
+            <TextView
+                android:id="@+id/tv_offline_kcxz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_ffffff"
+                android:lineSpacingExtra="3dp"
+                android:paddingBottom="15dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/home_teacher_subject"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/size_12sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_ffffff"
+                android:drawableLeft="@mipmap/class_details"
+                android:drawablePadding="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="15dp"
+                android:text="课程简介"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/size_14sp" />
+
+            <TextView
+                android:id="@+id/tv_offline_kcjj"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_ffffff"
+                android:lineSpacingExtra="3dp"
+                android:paddingBottom="15dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/home_teacher_subject"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/size_12sp" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <View
+        android:id="@+id/rb_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_e59b10" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_ffae12"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_offline_apply"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dp"
+            android:layout_weight="3"
+            android:background="@drawable/btn_item_selector"
+            android:button="@null"
+            android:checked="false"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="申请试听"
+            android:textColor="@drawable/selector_textcolor_666666yellow"
+            android:textSize="@dimen/size_14sp" />
+
+        <Button
+            android:id="@+id/btn_offline_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@drawable/btn_rule_default_ok"
+            android:padding="15dp"
+            android:text="立即购买"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/size_14sp" />
+    </LinearLayout>
+</LinearLayout>

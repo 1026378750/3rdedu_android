@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_ffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/iv_oneone_image"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/ic_personal_avatar" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:id="@+id/iv_oneone_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/size_14sp"
+                android:maxLength="10"
+                android:ellipsize="end"
+                tools:text="老师名称" />
+
+            <ImageView
+                android:id="@+id/tv_oneone_isplant"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="1dp"
+                android:layout_toEndOf="@+id/iv_oneone_name"
+                android:src="@mipmap/ic_launcher"
+                android:visibility="gone"
+                android:layout_alignTop="@+id/iv_oneone_name"
+                android:layout_alignBottom="@+id/iv_oneone_name" />
+
+            <LinearLayout
+                android:id="@+id/iv_oneone_priceview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/iv_oneone_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_ffae12"
+                    android:textSize="@dimen/size_14sp"
+                    tools:text="授课价格" />
+
+                <TextView
+                    android:id="@+id/tv_original_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:text="/小时起"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/size_9sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/iv_oneone_priprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/iv_oneone_priceview"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/size_9sp"
+                tools:text="原价" />
+
+            <TextView
+                android:id="@+id/tv_oneone_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_oneone_name"
+                android:drawablePadding="5dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLength="10"
+                android:maxLines="1"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/size_10sp"
+                tools:text="地址" />
+
+            <TextView
+                android:id="@+id/iv_oneone_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_oneone_address"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/size_10sp"
+                tools:text="老师基础信息" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_oneone_message"
+                android:layout_marginTop="5dp">
+
+                <ImageView
+                    android:id="@+id/iv_quality_certification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="11dp"
+                    android:scaleType="fitStart"
+                    android:src="@mipmap/ic_quality_certification"
+                    android:visibility="gone"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_realname_certification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="11dp"
+                    android:scaleType="fitStart"
+                    android:src="@mipmap/ic_realname_authentication"
+                    android:visibility="gone"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_teacher_certification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="11dp"
+                    android:scaleType="fitStart"
+                    android:src="@mipmap/ic_teacher_certification"
+                    android:visibility="gone"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_education_certification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="11dp"
+                    android:scaleType="fitStart"
+                    android:src="@mipmap/ic_education_certification"
+                    android:visibility="gone"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/iv_oneone_latelycourse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="90dp"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/size_11sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        tools:text="最近开课" />
+
+    <View
+        android:id="@+id/v_oneone_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/background_color" />
+</LinearLayout>

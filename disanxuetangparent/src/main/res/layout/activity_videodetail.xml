@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background="@color/color_ffffff"
+        app:left_button_image="@mipmap/ic_black_left_arrow"
+        app:show_left_button="true"
+        app:title_text="课程详情"
+        app:isTopBar="true"
+        app:show_line="false"
+        app:title_textColor="@color/color_333333"
+        app:title_textSize="@dimen/size_18px" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_videodetail_image"
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:layout_marginTop="1dp"
+                android:scaleType="fitXY"
+                android:background="@color/color_ffffff"
+                android:src="@mipmap/loading_figure" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_ffffff"
+                android:layout_marginTop="1dp"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_videodetail_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:lineSpacingExtra="3dp"
+                    android:maxLines="2"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/size_14sp"
+                    tools:text="名称" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_videodetail_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="¥399.00"
+                        android:textColor="@color/color_ffae12"
+                        android:textSize="@dimen/size_14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_videodetail_preprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        tools:text="¥399.00"
+                        android:textColor="@color/color_999999"
+                        android:textSize="@dimen/size_10sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/color_ffffff"
+                android:gravity="center_vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_videodetail_classify"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@mipmap/video_class"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/size_14sp"
+                    tools:text="分类"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_videodetail_teacher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:paddingRight="10dp"
+                    tools:text="老师名称"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/size_14sp"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_ffffff"
+                android:drawableLeft="@mipmap/class_details"
+                android:drawablePadding="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="15dp"
+                android:text="课程须知"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/size_14sp" />
+
+            <TextView
+                android:id="@+id/tv_videodetail_notice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_ffffff"
+                android:paddingBottom="15dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/color_333333"
+                android:lineSpacingExtra="3dp"
+                android:textSize="@dimen/size_12sp"
+                tools:text="课程须知" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_ffffff"
+                android:drawableLeft="@mipmap/class_details"
+                android:drawablePadding="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="15dp"
+                android:text="课程简介"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/size_14sp" />
+
+            <TextView
+                android:id="@+id/tv_videodetail_introduction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_ffffff"
+                android:paddingBottom="15dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/color_333333"
+                android:lineSpacingExtra="3dp"
+                android:textSize="@dimen/size_12sp"
+                tools:text="课程简介" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_ffffff"
+                android:drawableLeft="@mipmap/class_details"
+                android:drawablePadding="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="15dp"
+                android:text="讲师简介"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/size_14sp" />
+
+            <TextView
+                android:id="@+id/tv_teacherdetail_introduction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_ffffff"
+                android:paddingBottom="15dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/color_333333"
+                android:lineSpacingExtra="3dp"
+                android:textSize="@dimen/size_12sp"
+                tools:text="课程简介" />
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+    <TextView
+        android:id="@+id/tv_liveorder_delte"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/btn_item_selector"
+        android:text="名额已满"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textSize="@dimen/size_16sp"
+        android:textColor="@color/color_ffffff"
+        android:visibility="gone"
+        />
+
+    <Button
+        android:id="@+id/btn_videodetail_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_rule_default_ok"
+        android:text="@string/now_buy"
+        android:textColor="@color/color_ffffff"
+        android:visibility="gone"
+        android:textSize="@dimen/size_16sp" />
+
+</LinearLayout>

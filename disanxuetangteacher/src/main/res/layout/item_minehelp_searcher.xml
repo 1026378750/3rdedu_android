@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/color_ffffff"
+    android:orientation="vertical">
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:id="@+id/ccb_item_searcher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:left_button_text="如何绑定助教？"
+        app:left_button_textColor="@color/color_666666"
+        app:left_button_textSize="@dimen/size_12px"
+        app:right_button_image="@mipmap/ic_black_right_arrow"
+        app:show_right_button="true" />
+
+    <TextView
+        android:id="@+id/tv_item_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="3dp"
+        android:padding="10dp"
+        tools:text="详情"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/size_10sp"
+        android:visibility="gone" />
+
+    <View style="@style/line_style" />
+</LinearLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_select_time"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    >
+
+    <RadioButton
+        android:id="@+id/rb_select_item"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@drawable/search_item_bg_selector"
+        android:button="@null"
+        android:clickable="false"
+        android:checked="false"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@drawable/selector_textcolor_white666666"
+        tools:text="按钮"
+        android:gravity="center"
+        android:textSize="@dimen/select_item"
+      />
+
+</RelativeLayout>

@@ -1,0 +1,131 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        applicationId "com.shengzhe.disan.xuetangteacher"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        //突破65536
+        multiDexEnabled true
+        // 默认是_360的渠道
+        manifestPlaceholders = [UMENG_CHANNEL_VALUE: "yingyongbao"]
+
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            //abiFilters 'armeabi', 'armeabi-v7a', 'armeabi-v8a', 'x86', 'x86_64', 'mips', 'mips64'
+            abiFilters "armeabi", "armeabi-v7a", "x86", "x86_64", 'mips'
+        }
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "5e4fdc48a4d2890bdd895e0e",
+                JPUSH_CHANNEL: "developer-default",
+        ]
+    }
+
+    //签名 支付必须正式签名
+    signingConfigs {
+        release {
+            keyAlias 'di_sanxuetangteacher'
+            keyPassword '147258369'
+            storeFile file('C:/keystore/disanxuetangteacher.jks')
+            storePassword '147258369'
+        }
+        debug {
+            keyAlias 'di_sanxuetangteacher'
+            keyPassword '147258369'
+            storeFile file('C:/keystore/disanxuetangteacher.jks')
+            storePassword '147258369'
+        }
+    }
+
+    buildTypes {
+        release {
+            // 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            //debuggable
+            debuggable true
+            // 移除无用的resource文件,依赖minifyEnabled true
+            minifyEnabled false
+            shrinkResources false
+            // 是否混淆
+            minifyEnabled false
+            //Zipalign优化
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+
+            //多渠道打包
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        // 输出apk名称为aplus-xiaomi-release-v1.0.apk
+                        def fileName = outputFile.name.replace("app", "3rdedu_teacher")
+                        def appName = fileName.replace(".apk", "-v${defaultConfig.versionName}.apk")
+                        output.outputFile = new File(outputFile.parent, appName)
+                    }
+                }
+            }
+        }
+        debug {
+            // 显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            //name后缀
+            //versionNameSuffix "-debug"
+            //debuggable TODO:打正式包时记得关掉
+            debuggable false
+            minifyEnabled false
+            //Zipalign优化
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            // 移除无用的resource文件
+            shrinkResources false
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    //android studio默认so文件加载目录为:src/main/jniLibs
+    //如在module的build.gradle按照如下方式,自定义了so文件加载目录请确保对应目录下只有armeabi目录
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    //分包使用
+    dexOptions {
+        incremental true
+        javaMaxHeapSize "4g"
+    }
+    /* 多渠道打包*/
+    productFlavors {
+        /*_360 {}
+        xiaomi {}
+        meizu {}
+        huawei {}
+        wandoujia {}
+        yingyongbao {}*/
+        baidu {}
+    }
+    productFlavors.all {
+        flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':disanxuelib')
+    compile project(':lkcamera')
+    compile project(':shortcutbadger')
+    compile files('libs/BaiduLBS_Android.jar')
+    compile files('libs/galaxy_lite.jar')
+    compile files('libs/patchupdate.jar')
+    //ButterKnife依赖
+    testCompile 'junit:junit:4.12'
+    compile 'com.jakewharton:butterknife:8.6.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
+}

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_color">
+
+    <com.main.disanxuelib.view.PagerSlidingTabStrip
+        android:id="@+id/pst_itemmineorder_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/size_12sp"
+        app:pstsIndicatorColor="@color/color_ff1d97ea"
+        app:pstsIndicatorHeight="2dp"
+        app:pstsSelectTabTextColor="@color/color_ff1d97ea"
+        app:pstsSelectTabTextSize="@dimen/size_14sp"
+        app:pstsShouldExpand="true"
+        app:pstsTextAllCaps="false"
+        app:pstsDividerColor = "@color/color_00000000"
+        app:pstsTabBackground="@color/color_ffffff"
+        app:pstsUnderlineColor="@color/line_color"
+        app:pstsUnderlineHeight="0.5dp" />
+
+    <!--可滑动的布局内容-->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_itemmineorder_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+</LinearLayout>

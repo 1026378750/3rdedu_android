@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:id="@+id/ccb_mine_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background_res="@drawable/status_bgcolor"
+        app:isTopBar="true"
+        app:left_button_image="@mipmap/ic_white_left_arrow"
+        app:show_left_button="true"
+        app:title_text="完善资料"
+        app:title_textColor="@color/color_ffffff"
+        app:title_textSize="@dimen/size_17px" />
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:id="@+id/ccb_center_userbase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background="@color/color_ffffff"
+        app:left_button_image="@drawable/ic_tick_unchecked"
+        app:left_button_text="基本信息"
+        app:left_button_textColor="@color/text1"
+        app:left_button_textSize="@dimen/size_15px"
+        app:right_image="@mipmap/ic_personal_avatar"
+        app:show_left_button="true"
+        app:show_right_button="true"
+        app:show_right_image="true"
+        app:show_line="false"
+        />
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:id="@+id/ccb_center_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background="@color/color_ffffff"
+        app:left_button_image="@drawable/ic_tick_unchecked"
+        app:left_button_text="城市"
+        app:left_button_textColor="@color/color_333333"
+        app:left_button_textSize="@dimen/size_14px"
+        app:right_button_hintText="请选择城市"
+        app:right_button_textColor="@color/color_333333"
+        app:right_button_textHintColor="@color/color_999999"
+        app:right_button_textSize="@dimen/size_14px"
+        app:show_left_button="true"
+        app:show_right_button="true" />
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:id="@+id/ccb_center_subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:bar_background="@color/color_ffffff"
+        app:left_button_image="@drawable/ic_tick_unchecked"
+        app:left_button_text="科目"
+        app:left_button_textColor="@color/color_333333"
+        app:left_button_textSize="@dimen/size_14px"
+        app:right_button_hintText="请选择科目"
+        app:right_button_textColor="@color/color_333333"
+        app:right_button_textHintColor="@color/color_999999"
+        app:right_button_textSize="@dimen/size_14px"
+        app:show_left_button="true"
+        app:show_right_button="true" />
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:id="@+id/ccb_center_age"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background="@color/color_ffffff"
+        app:left_button_image="@drawable/ic_tick_unchecked"
+        app:left_button_text="教龄"
+        app:left_button_textColor="@color/color_333333"
+        app:left_button_textSize="@dimen/size_14px"
+        app:right_button_hintText="请输入教龄"
+        app:right_button_textColor="@color/color_333333"
+        app:right_button_textHintColor="@color/color_999999"
+        app:right_button_textSize="@dimen/size_14px"
+        app:show_left_button="true"
+        app:show_right_button="true" />
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:id="@+id/ccb_center_school"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:bar_background="@color/color_ffffff"
+        app:left_button_image="@drawable/ic_tick_unchecked"
+        app:left_button_text="毕业院校"
+        app:left_button_textColor="@color/color_333333"
+        app:left_button_textSize="@dimen/size_14px"
+        app:right_button_hintText="请输入院校"
+        app:right_button_textColor="@color/color_333333"
+        app:right_button_textHintColor="@color/color_999999"
+        app:right_button_textSize="@dimen/size_14px"
+        app:show_left_button="true"
+        app:show_right_button="true" />
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:id="@+id/ccb_center_introduce"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background="@color/color_ffffff"
+        app:left_button_image="@drawable/ic_tick_unchecked"
+        app:left_button_text="个人简介"
+        app:left_button_textColor="@color/color_333333"
+        app:left_button_textSize="@dimen/size_14px"
+        app:right_button_hintText="请输个人简介"
+        app:right_button_textColor="@color/color_333333"
+        app:right_button_textHintColor="@color/color_999999"
+        app:right_button_textSize="@dimen/size_14px"
+        app:show_left_button="true"
+        app:show_right_button="true" />
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:id="@+id/ccb_center_education"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:bar_background="@color/color_ffffff"
+        app:left_button_text="教学经历"
+        app:left_button_textColor="@color/color_333333"
+        app:left_button_textSize="@dimen/size_14px"
+        app:right_button_hintText="请添加教学经历"
+        app:right_button_textColor="@color/color_333333"
+        app:right_button_textHintColor="@color/color_999999"
+        app:right_button_textSize="@dimen/size_14px"
+        app:show_right_button="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="科目提交后不可更改，请慎重选择。"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/size_10sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <CheckBox
+        android:id="@+id/tv_center_comfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/selector_timer_btn"
+        android:button="@null"
+        android:clickable="false"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="保存"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/size_15sp" />
+
+</LinearLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_color">
+
+    <RelativeLayout
+        android:id="@+id/rl_mineorder_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="@drawable/status_bgcolor"
+        android:padding="1dp">
+
+        <TextView
+            android:id="@+id/common_bar_leftBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@mipmap/ic_white_left_arrow"
+            android:drawablePadding="8dp"
+            android:padding="10dp"
+            android:layout_alignParentBottom="true"/>
+
+        <com.main.disanxuelib.view.PagerSlidingTabStrip
+            android:id="@+id/pst_mineorder_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/transparent_40"
+            android:textSize="@dimen/size_14sp"
+            app:pstsDividerColor="@color/color_00000000"
+            app:pstsIndicatorHeight="0dp"
+            app:pstsSelectTabTextColor="@color/color_ffffff"
+            app:pstsSelectTabTextSize="@dimen/size_17sp"
+            app:pstsTextAllCaps="false"
+            android:layout_alignParentBottom="true"
+            app:pstsUnderlineColor="@color/color_00000000"
+            app:pstsUnderlineHeight="1dp" />
+
+    </RelativeLayout>
+
+    <!--可滑动的布局内容-->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_mineorder_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+</LinearLayout>

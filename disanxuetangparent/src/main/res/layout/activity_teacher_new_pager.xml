@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:id="@+id/ccb_teacher_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background="@color/color_ffffff"
+        app:isTopBar="true"
+        app:left_button_image="@mipmap/ic_black_left_arrow"
+        app:right_button_image="@mipmap/abc_ic_menu_share_pressed"
+        app:show_left_button="true"
+        app:show_right_button="true"
+        app:title_text="我的主页"
+        app:title_textColor="@color/color_333333"
+        app:title_textSize="@dimen/size_17px"
+        app:view_alpha_showType="TitleView" />
+
+
+    <com.shengzhe.disan.xuetangparent.view.X5WebView
+        android:id="@+id/web_newteacherpager"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:background="@color/color_ffffff" />
+</LinearLayout>

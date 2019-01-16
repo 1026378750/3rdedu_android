@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background_res="@drawable/status_bgcolor"
+        app:isTopBar="true"
+        app:left_button_image="@mipmap/ic_white_left_arrow"
+        app:show_left_button="true"
+        app:title_text="开课设置"
+        app:title_textColor="@color/color_ffffff"
+        app:title_textSize="@dimen/size_17px" />
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:id="@+id/ccb_startclass_localaddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background="@color/color_ffffff"
+        app:left_button_image="@mipmap/city_location"
+        app:show_left_button="true"
+        app:left_button_text="地址"
+        app:show_line="false"
+        app:left_button_textColor="@color/color_333333"
+        app:left_button_textSize="@dimen/size_14px" />
+
+    <RelativeLayout
+        android:id="@+id/rl_campus_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_ffffff"
+        android:layout_marginTop="10dp"
+        android:padding="10dp">
+
+        <RadioButton
+            android:id="@+id/rb_campus_checked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/btn_tick"
+            android:clickable="false"
+            android:enabled="false" />
+
+        <TextView
+            android:id="@+id/rb_campus_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toEndOf="@+id/rb_campus_checked"
+            android:text="所属校区"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/size_14sp" />
+
+        <TextView
+            android:id="@+id/rb_campus_campus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_toEndOf="@+id/rb_campus_title"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/size_14sp"
+            tools:text="所属校区" />
+
+        <TextView
+            android:id="@+id/rb_campus_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rb_campus_title"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/rb_campus_title"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/size_12sp"
+            tools:text="所属校区" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_address_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_ffffff"
+        android:layout_marginTop="10dp"
+        android:padding="10dp">
+
+        <RadioButton
+            android:id="@+id/rb_address_checked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/btn_tick"
+            android:clickable="false"
+            android:enabled="false" />
+
+        <TextView
+            android:id="@+id/rb_address_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toEndOf="@+id/rb_address_checked"
+            android:text="授课地址"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/size_14sp" />
+
+        <TextView
+            android:id="@+id/rb_address_campus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_toEndOf="@+id/rb_address_title"
+            android:textColor="@color/color_333333"
+            android:drawablePadding="10dp"
+            android:drawableRight="@mipmap/ic_black_right_arrow"
+            android:textSize="@dimen/size_14sp"
+            tools:text="授课地址" />
+
+        <TextView
+            android:id="@+id/rb_address_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rb_address_title"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/rb_address_title"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/size_12sp"
+            tools:text="授课地址" />
+
+    </RelativeLayout>
+
+
+    <View
+        android:id="@+id/line_one"
+        style="@style/line_style"
+        />
+    <RelativeLayout
+        android:id="@+id/rl_area_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_ffffff"
+        android:padding="10dp">
+
+        <RadioButton
+            android:id="@+id/rb_area_checked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/btn_tick"
+            android:clickable="false"
+            android:enabled="false" />
+
+        <TextView
+            android:id="@+id/rb_area_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toEndOf="@+id/rb_area_checked"
+            android:text="授课区域"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/size_14sp" />
+
+        <TextView
+            android:id="@+id/rb_area_campus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_toEndOf="@+id/rb_area_title"
+            android:textColor="@color/color_333333"
+            android:drawablePadding="10dp"
+            android:drawableRight="@mipmap/ic_black_right_arrow"
+            android:textSize="@dimen/size_14sp"
+            tools:text="授课区域" />
+
+    </RelativeLayout>
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:id="@+id/ccb_startclass_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:bar_background="@color/color_ffffff"
+        app:left_button_image="@drawable/ic_tick_unchecked"
+        app:left_button_text="授课时间"
+        app:left_button_textColor="@color/color_333333"
+        app:left_button_textSize="@dimen/size_14px"
+        app:right_button_image="@mipmap/ic_black_right_arrow"
+        app:show_left_button="true"
+        app:show_right_button="true" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/tv_startclass_comfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/btn_bg"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="保存"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/size_15sp" />
+
+</LinearLayout>

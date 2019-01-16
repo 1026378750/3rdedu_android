@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:gravity="center_vertical"
+       android:background="@color/color_ffffff"
+       android:padding="10dp"
+       >
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textColor="@color/color_333333"
+           android:textSize="@dimen/size_14sp"
+           android:text="全部课表"
+           />
+       <TextView
+           android:id="@+id/tv_onlive_title"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:textColor="@color/color_999999"
+           android:textSize="@dimen/size_14sp"
+           android:layout_marginLeft="10dp"
+           tools:text="全部课表"
+           />
+   </LinearLayout>
+
+    <View
+        style="@style/line_style"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_recycle_review"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/et_onliveoperator_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/btn_bg"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="保存(3/3)"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/size_15sp" />
+
+
+</LinearLayout>

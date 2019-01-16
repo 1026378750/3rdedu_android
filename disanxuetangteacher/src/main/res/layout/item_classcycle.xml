@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/item_classcycle_headline"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        />
+
+    <LinearLayout
+        style="@style/linlayout_style"
+        >
+
+        <TextView
+            android:id="@+id/item_classcycle_times"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/size_14sp"
+            tools:text="次数"
+            android:paddingLeft="16dp"
+            />
+        <TextView
+            android:id="@+id/item_classcycle_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/size_14sp"
+            android:layout_marginLeft="24dp"
+            tools:text="yyyy-MM-dd 星期 HH:mm"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/item_classcycle_line"
+        style="@style/line_style"/>
+
+</LinearLayout>

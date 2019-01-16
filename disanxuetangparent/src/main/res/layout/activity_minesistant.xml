@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f5f5f5"
+    android:orientation="vertical">
+
+    <com.main.disanxuelib.view.CommonCrosswiseBar
+        android:id="@+id/ccb_wallet_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background="@color/color_ffffff"
+        app:left_button_image="@mipmap/ic_black_left_arrow"
+        app:show_left_button="true"
+        app:title_text="我的助教"
+        app:isTopBar="true"
+        app:title_textColor="@color/color_333333"
+        app:title_textSize="@dimen/size_18px" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_ffffff">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@mipmap/bg_teaching_assistant" />
+
+        <ImageView
+            android:id="@+id/iv_sisant_head"
+            android:layout_width="86dp"
+            android:layout_height="86dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/cyclo_white"
+            android:padding="3dp"
+            android:src="@mipmap/ic_personal_avatar" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_ffffff"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/iv_sisant_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/size_17sp"
+            tools:text="老师姓名" />
+
+        <TextView
+            android:id="@+id/tv_mine_mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn_bg_default_cancel"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            tools:text="联系客服"
+            android:textSize="@dimen/size_12sp"
+            android:textColor="@color/color_ffffff" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/color_ffffff"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="您的助教会帮助您处理哪些事情？"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/size_14sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/color_ffffff"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="线下1对1的调课与退课问题"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/size_12sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/color_ffffff"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="支付出现问题，支付不了或收不到消息"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/size_12sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/color_ffffff"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="申请提现迟迟没有回复"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/size_12sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/color_ffffff"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="咨询课程或投诉等"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/size_12sp" />
+
+</LinearLayout>

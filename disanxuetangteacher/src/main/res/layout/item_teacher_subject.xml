@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/iv_subject_course"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/color_333333"
+            android:paddingLeft="16dp"
+            android:textSize="@dimen/size_13sp"
+            tools:text="最近开课" />
+
+
+        <RelativeLayout
+            android:id="@+id/tv_subject_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:id="@+id/tv_subject_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_ffae12"
+                android:textSize="@dimen/size_14sp"
+                tools:text="¥399.00" />
+
+            <TextView
+                android:id="@+id/iv_subject_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_subject_price"
+                android:layout_marginBottom="2dp"
+                android:layout_toEndOf="@+id/tv_subject_price"
+                android:text="/小时起"
+                android:visibility="gone"
+                android:textSize="@dimen/size_9sp" />
+
+            <TextView
+                android:id="@+id/tv_subject_preprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/iv_subject_time"
+                android:layout_below="@+id/iv_subject_time"
+                android:layout_marginTop="1dp"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/size_10sp"
+                android:visibility="gone"
+                tools:text="¥399.00" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_subject_gonext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_black_right_arrow" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/iv_subject_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line_color"/>
+
+
+</LinearLayout>

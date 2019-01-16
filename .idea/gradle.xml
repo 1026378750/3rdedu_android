@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/calendars" />
+            <option value="$PROJECT_DIR$/disanxuelib" />
+            <option value="$PROJECT_DIR$/disanxuetangparent" />
+            <option value="$PROJECT_DIR$/disanxuetangteacher" />
+            <option value="$PROJECT_DIR$/lkcamera" />
+            <option value="$PROJECT_DIR$/medialib" />
+            <option value="$PROJECT_DIR$/refreshlib" />
+            <option value="$PROJECT_DIR$/shortcutbadger" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <title>老师主页</title>
+  <link rel="icon" href="images/bitbug_favicon.ico" type="image/x-icon"/>
+  <link rel="stylesheet" href="css/gobal.min.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/dropload.min.css">
+</head>
+<body>
+<div class="teacherDetailWrap">
+  <section>
+    <ul class="courseWrap">
+      <li class="active oneToOneHeader" data="1"><span class="courseName">线下1对1</span><span class="number">(0)</span><div></div></li>
+      <li class="lineClassHeader" data="2"><span class="courseName">线下班课</span><span class="number">(0)</span><div></div></li>
+      <li class="onLineClassHeader" data="3"><span class="courseName">在线课程</span><span class="number">(0)</span><div></div></li>
+    </ul>
+    <div class="allClassWrap">
+      <div class="transformWrap clearfix">
+        <div class="oneToOneClassWrap" id="oneToOneClassWrap">
+          <ul>
+          </ul>
+          <div class="teacherBottomAll displayNone"><span></span><span class="text">已展示全部</span><span></span></div>
+        </div>
+        <div class="lineClassWrap" id="lineIscroll">
+          <ul>
+          </ul>
+          <div class="teacherBottomAll displayNone"><span></span><span class="text">已展示全部</span><span></span></div>
+        </div>
+        <div class="onLineClassWrap" id="onLineIscroll">
+          <ul>
+          </ul>
+          <div class="teacherBottomAll displayNone"><span></span><span class="text">已展示全部</span><span></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/aes.min.js"></script>
+<script type="text/javascript" src="js/global.js"></script>
+<script type="text/javascript" src="js/teacherClassList.js"></script>
+<script type="text/javascript">
+  $(function () {
+    teacherClassList();
+  })
+</script>
+</body>
+</html>

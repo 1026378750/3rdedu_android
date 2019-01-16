@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/ll_class"
+    android:layout_centerHorizontal="true"
+    android:background="@color/color_ffffff">
+
+    <TextView
+        android:id="@+id/tv_class_videoclass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/size_14sp"
+        tools:text="1. 2017-08-20 11:00-13:00" />
+
+    <TextView
+        android:id="@+id/tv_class_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_class_videoclass"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp"
+        android:text="可回放"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/size_12sp" />
+
+    <View
+        android:id="@+id/tv_class_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tv_class_videoclass"
+        android:background="@color/background_color" />
+</RelativeLayout>
